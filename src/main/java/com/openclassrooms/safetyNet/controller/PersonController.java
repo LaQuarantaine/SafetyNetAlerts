@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.openclassrooms.safetyNet.dto.ChildAlertDTO;
+import com.openclassrooms.safetyNet.dto.CommunityEmailDTO;
 import com.openclassrooms.safetyNet.dto.FireResponseDTO;
 import com.openclassrooms.safetyNet.dto.PersonInfoDTO;
 import com.openclassrooms.safetyNet.service.FirestationLogicService;
@@ -56,5 +57,13 @@ public class PersonController {
 	    List<PersonInfoDTO> persons = personInfoService.getPersonsByLastName(lastName);
 	    log.info("Réponse avec {} personne(s) trouvée(s)", persons.size());
 	    return ResponseEntity.ok(persons);
+	}
+	
+	@GetMapping("/communityEmail")	// endpoint 7
+	public ResponseEntity<List<CommunityEmailDTO>> getCommunityEmail(@RequestParam String city) {
+		log.info("Requete GET /communityEmail?city={}", city);
+		List<CommunityEmailDTO> emails = personInfoService.getEmailByCity(city);
+		log.info("Réponse avec {} email(s) trouvé(s)", emails.size());
+		return ResponseEntity.ok(emails);
 	}
 }

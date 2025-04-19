@@ -1,13 +1,16 @@
 package com.openclassrooms.safetyNet.service;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 
 import com.openclassrooms.safetyNet.dto.ChildAlertDTO;
+import com.openclassrooms.safetyNet.dto.CommunityEmailDTO;
 import com.openclassrooms.safetyNet.dto.FireResidentDTO;
 import com.openclassrooms.safetyNet.dto.FireResponseDTO;
 import com.openclassrooms.safetyNet.dto.HouseholdMemberDTO;
@@ -77,7 +80,7 @@ public class PersonInfoService {
 	    Optional<Firestation> stationOpt = fireStationRepository.findByAddress(address).stream().findFirst();
 	    String stationNumber = stationOpt.map(Firestation::getStation).orElse("N/A");
 
-	    // 2. Récupérer les résidents à cette adresse via PersonAccessService ✅
+	    // 2. Récupérer les résidents à cette adresse via PersonAccessService 
 	    List<Person> residents = personAccessService.getResidentsAtAddress(address);
 
 	    // 3. Mapper chaque résident vers un DTO
@@ -130,6 +133,23 @@ public class PersonInfoService {
 	            );
 	        })
 	        .collect(Collectors.toList());
+	}
+
+	public List<CommunityEmailDTO> getEmailByCity(String city) {
+		log.info("Recherche des emails par ville : {}", city);
+		
+		List<Person> residents = personAccessService.getResidentsAtCity(city) ;
+		log.debug("{} résident(s) trouvé(s) dans cette ville", residents.size());
+		
+		Set<CommunityEmailDTO> emailSet = new HashSet<>();
+	    for (Person person : residents) {
+	        emailSet.add(new CommunityEmailDTO(person.getEmail()));
+	    }
+
+	    List<CommunityEmailDTO> emails = new ArrayList<>(emailSet);
+	    log.info("Nombre d'emails uniques trouvés pour la ville {} : {}", city, emails.size());
+
+	    return emails;
 	}
 
 }

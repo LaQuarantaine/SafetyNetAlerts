@@ -5697,3 +5697,501 @@ Identify and stop the process that's listening on port 8080 or configure this ap
 2025-04-18 17:06:26 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
 2025-04-18 17:06:26 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
 2025-04-18 17:06:26 [http-nio-8080-exec-8] INFO  com.openclassrooms.safetyNet.controller.PersonController - Réponse avec 6 personne(s) trouvée(s)
+2025-04-19 16:24:05 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - Starting SafetyNetApplication using Java 17.0.12 with PID 11952 (C:\Users\cvign\eclipse-workspace\safetyNetAlerts\target\classes started by cvign in C:\Users\cvign\eclipse-workspace\safetyNetAlerts)
+2025-04-19 16:24:05 [main] DEBUG com.openclassrooms.safetyNet.SafetyNetApplication - Running with Spring Boot v3.1.6, Spring v6.0.14
+2025-04-19 16:24:05 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-19 16:24:08 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-19 16:24:08 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-19 16:24:08 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-19 16:24:08 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-04-19 16:24:08 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-19 16:24:08 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-19 16:24:09 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+2025-04-19 16:24:09 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2025-04-19 16:24:09 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-19 16:24:09 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@76b305e1
+2025-04-19 16:24:09 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-19 16:24:09 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 16:24:11 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 16:24:12 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-19 16:24:12 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-04-19 16:24:12 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - Started SafetyNetApplication in 8.041 seconds (process running for 9.05)
+2025-04-19 16:24:12 [main] DEBUG org.hibernate.SQL - select p1_0.id,p1_0.address,p1_0.city,p1_0.email,p1_0.first_name,p1_0.last_name,p1_0.phone,p1_0.zip from persons p1_0
+2025-04-19 16:24:12 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 16:24:12 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - select f1_0.id,f1_0.address,f1_0.station from firestations f1_0
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from firestations where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from firestations where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from firestations where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from firestations where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from firestations where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from firestations where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from firestations where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from firestations where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from firestations where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from firestations where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from firestations where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from firestations where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - delete from firestations where id=?
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into firestations (address,station) values (?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into firestations (address,station) values (?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into firestations (address,station) values (?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into firestations (address,station) values (?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into firestations (address,station) values (?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into firestations (address,station) values (?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into firestations (address,station) values (?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into firestations (address,station) values (?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into firestations (address,station) values (?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into firestations (address,station) values (?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into firestations (address,station) values (?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into firestations (address,station) values (?,?)
+2025-04-19 16:24:13 [main] DEBUG org.hibernate.SQL - insert into firestations (address,station) values (?,?)
+2025-04-19 16:24:26 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-19 16:24:26 [http-nio-8080-exec-1] INFO  com.openclassrooms.safetyNet.controller.FirestationController - Entrée requête GET /firestation?stationNumber=1
+2025-04-19 16:24:26 [http-nio-8080-exec-1] INFO  com.openclassrooms.safetyNet.service.FirestationLogicService - Recherche des personnes couvertes par la caserne n°1
+2025-04-19 16:24:27 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select f1_0.id,f1_0.address,f1_0.station from firestations f1_0 where f1_0.station=?
+2025-04-19 16:24:27 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select p1_0.id,p1_0.address,p1_0.city,p1_0.email,p1_0.first_name,p1_0.last_name,p1_0.phone,p1_0.zip from persons p1_0 where p1_0.address in (?,?,?)
+2025-04-19 16:24:27 [http-nio-8080-exec-1] DEBUG com.openclassrooms.safetyNet.service.FirestationLogicService - 6 personne(s) trouvée(s) à ces adresses
+2025-04-19 16:24:27 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:24:27 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:24:27 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:24:27 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:24:27 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:24:27 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:24:27 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:24:27 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:24:27 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:24:27 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:24:27 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:24:27 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:24:27 [http-nio-8080-exec-1] INFO  com.openclassrooms.safetyNet.service.FirestationLogicService - Résultat : 5 adultes, 1 enfants couverts
+2025-04-19 16:24:27 [http-nio-8080-exec-1] INFO  com.openclassrooms.safetyNet.controller.FirestationController - Sortie réponse avec 6 personnes
+2025-04-19 16:24:47 [http-nio-8080-exec-3] INFO  com.openclassrooms.safetyNet.controller.PersonController - Entrée requête GET /childAlert?address=1509 Culver St
+2025-04-19 16:24:47 [http-nio-8080-exec-3] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Recherche des enfants à l'adresse : 1509 Culver St
+2025-04-19 16:24:47 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select p1_0.id,p1_0.address,p1_0.city,p1_0.email,p1_0.first_name,p1_0.last_name,p1_0.phone,p1_0.zip from persons p1_0 where p1_0.address=?
+2025-04-19 16:24:47 [http-nio-8080-exec-3] DEBUG com.openclassrooms.safetyNet.service.PersonInfoService - 5 résident(s) trouvé(s) à cette adresse
+2025-04-19 16:24:47 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:24:47 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:24:47 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:24:47 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:24:47 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:24:47 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:24:47 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:24:47 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:24:47 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:24:47 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:24:47 [http-nio-8080-exec-3] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Nombre d'enfants trouvés à l'adresse 1509 Culver St : 2
+2025-04-19 16:24:47 [http-nio-8080-exec-3] INFO  com.openclassrooms.safetyNet.controller.PersonController - 2 enfant(s) trouvé(s) à l'adresse : 1509 Culver St
+2025-04-19 16:25:46 [http-nio-8080-exec-5] INFO  com.openclassrooms.safetyNet.controller.FirestationController - Entrée requête GET /firestation?stationNumber=4
+2025-04-19 16:25:46 [http-nio-8080-exec-5] INFO  com.openclassrooms.safetyNet.service.FirestationLogicService - Recherche des personnes couvertes par la caserne n°4
+2025-04-19 16:25:46 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select f1_0.id,f1_0.address,f1_0.station from firestations f1_0 where f1_0.station=?
+2025-04-19 16:25:46 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select p1_0.id,p1_0.address,p1_0.city,p1_0.email,p1_0.first_name,p1_0.last_name,p1_0.phone,p1_0.zip from persons p1_0 where p1_0.address in (?,?)
+2025-04-19 16:25:46 [http-nio-8080-exec-5] DEBUG com.openclassrooms.safetyNet.service.FirestationLogicService - 4 personne(s) trouvée(s) à ces adresses
+2025-04-19 16:25:46 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:25:46 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:25:46 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:25:46 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:25:46 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:25:46 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:25:46 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:25:46 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:25:46 [http-nio-8080-exec-5] INFO  com.openclassrooms.safetyNet.service.FirestationLogicService - Résultat : 4 adultes, 0 enfants couverts
+2025-04-19 16:25:46 [http-nio-8080-exec-5] INFO  com.openclassrooms.safetyNet.controller.FirestationController - Sortie réponse avec 4 personnes
+2025-04-19 16:26:07 [http-nio-8080-exec-6] INFO  com.openclassrooms.safetyNet.controller.PersonController - Entrée requête GET /childAlert?address=951 LoneTree Rd
+2025-04-19 16:26:07 [http-nio-8080-exec-6] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Recherche des enfants à l'adresse : 951 LoneTree Rd
+2025-04-19 16:26:07 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select p1_0.id,p1_0.address,p1_0.city,p1_0.email,p1_0.first_name,p1_0.last_name,p1_0.phone,p1_0.zip from persons p1_0 where p1_0.address=?
+2025-04-19 16:26:07 [http-nio-8080-exec-6] DEBUG com.openclassrooms.safetyNet.service.PersonInfoService - 1 résident(s) trouvé(s) à cette adresse
+2025-04-19 16:26:07 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:26:07 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:26:07 [http-nio-8080-exec-6] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Nombre d'enfants trouvés à l'adresse 951 LoneTree Rd : 0
+2025-04-19 16:26:07 [http-nio-8080-exec-6] INFO  com.openclassrooms.safetyNet.controller.PersonController - Aucun enfant trouvé pour l'adresse : 951 LoneTree Rd
+2025-04-19 16:26:17 [http-nio-8080-exec-7] INFO  com.openclassrooms.safetyNet.controller.PersonController - Entrée requête GET /childAlert?address=1509 Culver St
+2025-04-19 16:26:17 [http-nio-8080-exec-7] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Recherche des enfants à l'adresse : 1509 Culver St
+2025-04-19 16:26:17 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select p1_0.id,p1_0.address,p1_0.city,p1_0.email,p1_0.first_name,p1_0.last_name,p1_0.phone,p1_0.zip from persons p1_0 where p1_0.address=?
+2025-04-19 16:26:17 [http-nio-8080-exec-7] DEBUG com.openclassrooms.safetyNet.service.PersonInfoService - 5 résident(s) trouvé(s) à cette adresse
+2025-04-19 16:26:17 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:26:17 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:26:17 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:26:17 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:26:17 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:26:17 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:26:17 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:26:17 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:26:17 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:26:17 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:26:17 [http-nio-8080-exec-7] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Nombre d'enfants trouvés à l'adresse 1509 Culver St : 2
+2025-04-19 16:26:17 [http-nio-8080-exec-7] INFO  com.openclassrooms.safetyNet.controller.PersonController - 2 enfant(s) trouvé(s) à l'adresse : 1509 Culver St
+2025-04-19 16:26:50 [http-nio-8080-exec-9] INFO  com.openclassrooms.safetyNet.controller.FirestationController - Entrée requête GET /phoneAlert?firestation=2
+2025-04-19 16:26:50 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select f1_0.id,f1_0.address,f1_0.station from firestations f1_0 where f1_0.station=?
+2025-04-19 16:26:50 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select p1_0.id,p1_0.address,p1_0.city,p1_0.email,p1_0.first_name,p1_0.last_name,p1_0.phone,p1_0.zip from persons p1_0 where p1_0.address in (?,?,?)
+2025-04-19 16:26:50 [http-nio-8080-exec-9] INFO  com.openclassrooms.safetyNet.controller.FirestationController - Sortie réponse avec 4 numéro(s) de téléphone
+2025-04-19 16:26:58 [http-nio-8080-exec-10] INFO  com.openclassrooms.safetyNet.controller.FirestationController - Entrée requête GET /phoneAlert?firestation=1
+2025-04-19 16:26:58 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select f1_0.id,f1_0.address,f1_0.station from firestations f1_0 where f1_0.station=?
+2025-04-19 16:26:58 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select p1_0.id,p1_0.address,p1_0.city,p1_0.email,p1_0.first_name,p1_0.last_name,p1_0.phone,p1_0.zip from persons p1_0 where p1_0.address in (?,?,?)
+2025-04-19 16:26:58 [http-nio-8080-exec-10] INFO  com.openclassrooms.safetyNet.controller.FirestationController - Sortie réponse avec 4 numéro(s) de téléphone
+2025-04-19 16:27:50 [http-nio-8080-exec-1] INFO  com.openclassrooms.safetyNet.controller.PersonController - Requête GET /person/fire?address=947 E. Rose Dr
+2025-04-19 16:27:50 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select f1_0.id,f1_0.address,f1_0.station from firestations f1_0 where f1_0.address=?
+2025-04-19 16:27:50 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select p1_0.id,p1_0.address,p1_0.city,p1_0.email,p1_0.first_name,p1_0.last_name,p1_0.phone,p1_0.zip from persons p1_0 where p1_0.address=?
+2025-04-19 16:27:50 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:27:50 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:27:50 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:27:50 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:27:50 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:27:50 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:27:50 [http-nio-8080-exec-1] INFO  com.openclassrooms.safetyNet.controller.PersonController - Réponse avec 3 résident(s) à l'adresse 947 E. Rose Dr
+2025-04-19 16:28:58 [http-nio-8080-exec-4] INFO  com.openclassrooms.safetyNet.controller.FirestationController - Requête GET /flood/stations?stations=[1, 2, 3]
+2025-04-19 16:28:58 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select f1_0.id,f1_0.address,f1_0.station from firestations f1_0 where f1_0.station=?
+2025-04-19 16:28:58 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select f1_0.id,f1_0.address,f1_0.station from firestations f1_0 where f1_0.station=?
+2025-04-19 16:28:58 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select f1_0.id,f1_0.address,f1_0.station from firestations f1_0 where f1_0.station=?
+2025-04-19 16:28:58 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select p1_0.id,p1_0.address,p1_0.city,p1_0.email,p1_0.first_name,p1_0.last_name,p1_0.phone,p1_0.zip from persons p1_0 where p1_0.address=?
+2025-04-19 16:28:58 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:58 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:58 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:58 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:58 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select p1_0.id,p1_0.address,p1_0.city,p1_0.email,p1_0.first_name,p1_0.last_name,p1_0.phone,p1_0.zip from persons p1_0 where p1_0.address=?
+2025-04-19 16:28:58 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:58 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:58 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select p1_0.id,p1_0.address,p1_0.city,p1_0.email,p1_0.first_name,p1_0.last_name,p1_0.phone,p1_0.zip from persons p1_0 where p1_0.address=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select p1_0.id,p1_0.address,p1_0.city,p1_0.email,p1_0.first_name,p1_0.last_name,p1_0.phone,p1_0.zip from persons p1_0 where p1_0.address=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select p1_0.id,p1_0.address,p1_0.city,p1_0.email,p1_0.first_name,p1_0.last_name,p1_0.phone,p1_0.zip from persons p1_0 where p1_0.address=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select p1_0.id,p1_0.address,p1_0.city,p1_0.email,p1_0.first_name,p1_0.last_name,p1_0.phone,p1_0.zip from persons p1_0 where p1_0.address=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select p1_0.id,p1_0.address,p1_0.city,p1_0.email,p1_0.first_name,p1_0.last_name,p1_0.phone,p1_0.zip from persons p1_0 where p1_0.address=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select p1_0.id,p1_0.address,p1_0.city,p1_0.email,p1_0.first_name,p1_0.last_name,p1_0.phone,p1_0.zip from persons p1_0 where p1_0.address=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select p1_0.id,p1_0.address,p1_0.city,p1_0.email,p1_0.first_name,p1_0.last_name,p1_0.phone,p1_0.zip from persons p1_0 where p1_0.address=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select p1_0.id,p1_0.address,p1_0.city,p1_0.email,p1_0.first_name,p1_0.last_name,p1_0.phone,p1_0.zip from persons p1_0 where p1_0.address=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:28:59 [http-nio-8080-exec-4] INFO  com.openclassrooms.safetyNet.controller.FirestationController - Réponse avec 10 adresse(s) impactée(s)
+2025-04-19 16:29:16 [http-nio-8080-exec-5] INFO  com.openclassrooms.safetyNet.controller.FirestationController - Requête GET /flood/stations?stations=[1]
+2025-04-19 16:29:16 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select f1_0.id,f1_0.address,f1_0.station from firestations f1_0 where f1_0.station=?
+2025-04-19 16:29:16 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select p1_0.id,p1_0.address,p1_0.city,p1_0.email,p1_0.first_name,p1_0.last_name,p1_0.phone,p1_0.zip from persons p1_0 where p1_0.address=?
+2025-04-19 16:29:16 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:29:16 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:29:16 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:29:16 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:29:16 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select p1_0.id,p1_0.address,p1_0.city,p1_0.email,p1_0.first_name,p1_0.last_name,p1_0.phone,p1_0.zip from persons p1_0 where p1_0.address=?
+2025-04-19 16:29:16 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:29:16 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:29:16 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:29:16 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:29:16 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:29:16 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:29:16 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select p1_0.id,p1_0.address,p1_0.city,p1_0.email,p1_0.first_name,p1_0.last_name,p1_0.phone,p1_0.zip from persons p1_0 where p1_0.address=?
+2025-04-19 16:29:16 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:29:16 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:29:16 [http-nio-8080-exec-5] INFO  com.openclassrooms.safetyNet.controller.FirestationController - Réponse avec 3 adresse(s) impactée(s)
+2025-04-19 16:29:30 [http-nio-8080-exec-6] INFO  com.openclassrooms.safetyNet.controller.FirestationController - Requête GET /flood/stations?stations=[1, 2]
+2025-04-19 16:29:30 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select f1_0.id,f1_0.address,f1_0.station from firestations f1_0 where f1_0.station=?
+2025-04-19 16:29:30 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select f1_0.id,f1_0.address,f1_0.station from firestations f1_0 where f1_0.station=?
+2025-04-19 16:29:30 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select p1_0.id,p1_0.address,p1_0.city,p1_0.email,p1_0.first_name,p1_0.last_name,p1_0.phone,p1_0.zip from persons p1_0 where p1_0.address=?
+2025-04-19 16:29:30 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:29:30 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:29:31 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select p1_0.id,p1_0.address,p1_0.city,p1_0.email,p1_0.first_name,p1_0.last_name,p1_0.phone,p1_0.zip from persons p1_0 where p1_0.address=?
+2025-04-19 16:29:31 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:29:31 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:29:31 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:29:31 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:29:31 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select p1_0.id,p1_0.address,p1_0.city,p1_0.email,p1_0.first_name,p1_0.last_name,p1_0.phone,p1_0.zip from persons p1_0 where p1_0.address=?
+2025-04-19 16:29:31 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:29:31 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:29:31 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:29:31 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:29:31 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:29:31 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:29:31 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select p1_0.id,p1_0.address,p1_0.city,p1_0.email,p1_0.first_name,p1_0.last_name,p1_0.phone,p1_0.zip from persons p1_0 where p1_0.address=?
+2025-04-19 16:29:31 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:29:31 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:29:31 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select p1_0.id,p1_0.address,p1_0.city,p1_0.email,p1_0.first_name,p1_0.last_name,p1_0.phone,p1_0.zip from persons p1_0 where p1_0.address=?
+2025-04-19 16:29:31 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:29:31 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:29:31 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:29:31 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:29:31 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:29:31 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:29:31 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select p1_0.id,p1_0.address,p1_0.city,p1_0.email,p1_0.first_name,p1_0.last_name,p1_0.phone,p1_0.zip from persons p1_0 where p1_0.address=?
+2025-04-19 16:29:31 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:29:31 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:29:31 [http-nio-8080-exec-6] INFO  com.openclassrooms.safetyNet.controller.FirestationController - Réponse avec 6 adresse(s) impactée(s)
+2025-04-19 16:30:59 [http-nio-8080-exec-9] INFO  com.openclassrooms.safetyNet.controller.PersonController - Requête GET /personInfo?lastName=Zemicks
+2025-04-19 16:30:59 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select p1_0.id,p1_0.address,p1_0.city,p1_0.email,p1_0.first_name,p1_0.last_name,p1_0.phone,p1_0.zip from persons p1_0 where p1_0.last_name=?
+2025-04-19 16:30:59 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:30:59 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:30:59 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:30:59 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:30:59 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:30:59 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0 where m1_0.first_name=? and m1_0.last_name=?
+2025-04-19 16:30:59 [http-nio-8080-exec-9] INFO  com.openclassrooms.safetyNet.controller.PersonController - Réponse avec 3 personne(s) trouvée(s)
+2025-04-19 17:18:25 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - Starting SafetyNetApplication using Java 17.0.12 with PID 13996 (C:\Users\cvign\eclipse-workspace\safetyNetAlerts\target\classes started by cvign in C:\Users\cvign\eclipse-workspace\safetyNetAlerts)
+2025-04-19 17:18:25 [main] DEBUG com.openclassrooms.safetyNet.SafetyNetApplication - Running with Spring Boot v3.1.6, Spring v6.0.14
+2025-04-19 17:18:25 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-19 17:18:27 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-19 17:18:27 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-19 17:18:27 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-19 17:18:27 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-04-19 17:18:27 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-19 17:18:28 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-19 17:18:28 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.13.Final
+2025-04-19 17:18:28 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2025-04-19 17:18:28 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-19 17:18:28 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@49c83262
+2025-04-19 17:18:28 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-19 17:18:28 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-19 17:18:29 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-19 17:18:30 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-19 17:18:30 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-04-19 17:18:30 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - Started SafetyNetApplication in 5.51 seconds (process running for 6.303)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - select p1_0.id,p1_0.address,p1_0.city,p1_0.email,p1_0.first_name,p1_0.last_name,p1_0.phone,p1_0.zip from persons p1_0
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from persons where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - select m1_0.id,m1_0.allergies,m1_0.birthdate,m1_0.first_name,m1_0.last_name,m1_0.medications from medicalrecords m1_0
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from medicalrecords where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - select f1_0.id,f1_0.address,f1_0.station from firestations f1_0
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from firestations where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from firestations where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from firestations where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from firestations where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from firestations where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from firestations where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from firestations where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from firestations where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from firestations where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from firestations where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from firestations where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from firestations where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - delete from firestations where id=?
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into persons (address,city,email,first_name,last_name,phone,zip) values (?,?,?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into medicalrecords (allergies,birthdate,first_name,last_name,medications) values (?,?,?,?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into firestations (address,station) values (?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into firestations (address,station) values (?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into firestations (address,station) values (?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into firestations (address,station) values (?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into firestations (address,station) values (?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into firestations (address,station) values (?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into firestations (address,station) values (?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into firestations (address,station) values (?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into firestations (address,station) values (?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into firestations (address,station) values (?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into firestations (address,station) values (?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into firestations (address,station) values (?,?)
+2025-04-19 17:18:31 [main] DEBUG org.hibernate.SQL - insert into firestations (address,station) values (?,?)
+2025-04-19 17:19:15 [http-nio-8080-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-19 17:19:15 [http-nio-8080-exec-2] INFO  com.openclassrooms.safetyNet.controller.PersonController - Requete GET /communityEmail?city=Culver
+2025-04-19 17:19:15 [http-nio-8080-exec-2] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Recherche des emails par ville : Culver
+2025-04-19 17:19:15 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select p1_0.id,p1_0.address,p1_0.city,p1_0.email,p1_0.first_name,p1_0.last_name,p1_0.phone,p1_0.zip from persons p1_0 where p1_0.city=?
+2025-04-19 17:19:15 [http-nio-8080-exec-2] DEBUG com.openclassrooms.safetyNet.service.PersonInfoService - 23 résident(s) trouvé(s) dans cette ville
+2025-04-19 17:19:15 [http-nio-8080-exec-2] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Nombre d'emails trouvés pour la ville Culver : 23
+2025-04-19 17:19:15 [http-nio-8080-exec-2] INFO  com.openclassrooms.safetyNet.controller.PersonController - Réponse avec 23 email(s) trouvé(s)

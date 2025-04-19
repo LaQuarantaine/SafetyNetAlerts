@@ -15,5 +15,6 @@ public interface PersonRepository extends JpaRepository<Person, Long> { 	//<enti
 	List <Person> findByAddressIn(List<String> addresses);
 	List <Person> findByAddress(String address);
 	List <String> findPhoneByAddressIn(List<String> addresses);
-	List <Person> findByLastName(String lastName); 
+	List <Person> findByLastName(String lastName);
+	List <Person> findByCity(String city); 
 }

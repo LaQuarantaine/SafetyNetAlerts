@@ -29,5 +29,10 @@ public class PersonAccessService {
                 .distinct()
                 .collect(Collectors.toList());
     }
+    
+    public List<Person> getResidentsAtCity(String city) {
+    	if (city == null) return Collections.emptyList();
+    	return personRepository.findByCity(city);
+    }
 }
 
