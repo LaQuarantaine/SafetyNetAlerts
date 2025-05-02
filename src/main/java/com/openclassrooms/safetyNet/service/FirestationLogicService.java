@@ -2,10 +2,13 @@ package com.openclassrooms.safetyNet.service;
 
 import com.openclassrooms.safetyNet.dto.FireResidentDTO;
 import com.openclassrooms.safetyNet.dto.FireResponseDTO;
+import com.openclassrooms.safetyNet.dto.FirestationDTO;
 import com.openclassrooms.safetyNet.dto.FirestationResponseDTO;
 import com.openclassrooms.safetyNet.dto.PersonCoveredDTO;
-import com.openclassrooms.safetyNet.model.MedicalRecord;
-import com.openclassrooms.safetyNet.model.Person;
+import com.openclassrooms.safetyNet.model.entity.Firestation;
+import com.openclassrooms.safetyNet.model.entity.MedicalRecord;
+import com.openclassrooms.safetyNet.model.entity.Person;
+import com.openclassrooms.safetyNet.repository.FirestationRepository;
 import com.openclassrooms.safetyNet.repository.PersonRepository;
 
 
@@ -16,9 +19,9 @@ import org.springframework.stereotype.Service;
 import java.util.*;
 import java.util.stream.Collectors;
 
-@Service
-@RequiredArgsConstructor
-@Slf4j
+@Service		//Spring détecte la classe
+@RequiredArgsConstructor	//Lombok génère automatiquement le constructeur
+@Slf4j			// pas besoin d'uitiliser @Autowired
 public class FirestationLogicService {
 
     private final FirestationService firestationService;
@@ -26,6 +29,7 @@ public class FirestationLogicService {
     private final PersonAgeService personAgeService;
     private final PersonAccessService personAccessService;
     private final MedicalRecordService medicalRecordService;
+    private final FirestationRepository firestationRepository;
 
     	// utilisée par endpoint 1
     public FirestationResponseDTO getPersonsByStation(String stationNumber) {
@@ -54,8 +58,7 @@ public class FirestationLogicService {
                     person.getFirstName(),
                     person.getLastName(),
                     person.getAddress(),
-                    person.getPhone(),
-                    age
+                    person.getPhone()
             ));
         }
 
@@ -134,8 +137,6 @@ public class FirestationLogicService {
                         Optional<MedicalRecord> medicalRecord = medicalRecordService
                                 .getByName(person.getFirstName(), person.getLastName());
 
-                        int age = personAgeService.getAgeForPerson(person);
-
                         List<String> meds = medicalRecord.map(MedicalRecord::getMedications).orElse(List.of());
                         List<String> allergies = medicalRecord.map(MedicalRecord::getAllergies).orElse(List.of());
 
@@ -143,7 +144,6 @@ public class FirestationLogicService {
                                 person.getFirstName(),
                                 person.getLastName(),
                                 person.getPhone(),
-                                age,
                                 meds,
                                 allergies
                         );
@@ -155,4 +155,47 @@ public class FirestationLogicService {
 
         return result;
     }
+
+    // Ajouter un nouveau mapping adresse/caserne
+	public void addFirestationMapping(FirestationDTO firestationDTO) {
+		Firestation firestation = new Firestation();
+        firestation.setAddress(firestationDTO.getAddress());
+        firestation.setStation(firestationDTO.getStation());
+        firestationRepository.save(firestation);
+		
+	}
+
+	// Mettre à jour un numéro de caserne pour une adresse
+	public boolean updateFirestationMapping(String address, String newStation) {
+		List<Firestation> firestations = firestationRepository.findByAddress(address);
+        if (!firestations.isEmpty()) {
+            // Ici pour la simplicité on met à jour tous les mappings trouvés pour l'adresse
+            for (Firestation firestation : firestations) {
+                firestation.setStation(newStation);
+                firestationRepository.save(firestation);
+            }
+            return true;
+        }
+        return false;
+	}
+
+	// Supprimer par adresse
+	public boolean deleteFirestationByAddress(String address) {
+	    List<Firestation> mappings = firestationRepository.findByAddress(address);
+	    if (!mappings.isEmpty()) {
+	        firestationRepository.deleteAll(mappings);
+	        return true;
+	    }
+	    return false;
+	}
+
+	// Supprimer par station
+	public boolean deleteFirestationByStation(String station) {
+	    List<Firestation> mappings = firestationRepository.findByStation(station);
+	    if (!mappings.isEmpty()) {
+	        firestationRepository.deleteAll(mappings);
+	        return true;
+	    }
+	    return false;
+	}
 }

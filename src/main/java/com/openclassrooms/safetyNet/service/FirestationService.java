@@ -1,6 +1,6 @@
 package com.openclassrooms.safetyNet.service;
 
-import com.openclassrooms.safetyNet.model.Firestation;
+import com.openclassrooms.safetyNet.model.entity.Firestation;
 import com.openclassrooms.safetyNet.repository.FirestationRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

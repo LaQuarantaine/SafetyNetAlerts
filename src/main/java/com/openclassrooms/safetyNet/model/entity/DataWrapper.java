@@ -1,4 +1,4 @@
-package com.openclassrooms.safetyNet.model;
+package com.openclassrooms.safetyNet.model.entity;
 
 import java.util.List;
 

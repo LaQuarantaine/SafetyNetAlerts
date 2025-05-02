@@ -15,9 +15,9 @@ import com.openclassrooms.safetyNet.dto.FireResidentDTO;
 import com.openclassrooms.safetyNet.dto.FireResponseDTO;
 import com.openclassrooms.safetyNet.dto.HouseholdMemberDTO;
 import com.openclassrooms.safetyNet.dto.PersonInfoDTO;
-import com.openclassrooms.safetyNet.model.Firestation;
-import com.openclassrooms.safetyNet.model.MedicalRecord;
-import com.openclassrooms.safetyNet.model.Person;
+import com.openclassrooms.safetyNet.model.entity.Firestation;
+import com.openclassrooms.safetyNet.model.entity.MedicalRecord;
+import com.openclassrooms.safetyNet.model.entity.Person;
 import com.openclassrooms.safetyNet.repository.FirestationRepository;
 import com.openclassrooms.safetyNet.repository.MedicalRecordRepository;
 import com.openclassrooms.safetyNet.repository.PersonRepository;
@@ -97,7 +97,7 @@ public class PersonInfoService {
 	                person.getFirstName(),
 	                person.getLastName(),
 	                person.getPhone(),
-	                age != null ? age : 0,
+	                age,
 	                record != null ? record.getMedications() : List.of(),
 	                record != null ? record.getAllergies() : List.of()
 	            );

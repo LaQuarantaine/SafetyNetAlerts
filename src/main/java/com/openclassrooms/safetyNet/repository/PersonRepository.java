@@ -1,11 +1,12 @@
 package com.openclassrooms.safetyNet.repository;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.openclassrooms.safetyNet.model.Person;
+import com.openclassrooms.safetyNet.model.entity.Person;
 
 @Repository
 public interface PersonRepository extends JpaRepository<Person, Long> { 	//<entité manipulée, type de la clé primaire>
@@ -17,4 +18,7 @@ public interface PersonRepository extends JpaRepository<Person, Long> { 	//<enti
 	List <String> findPhoneByAddressIn(List<String> addresses);
 	List <Person> findByLastName(String lastName);
 	List <Person> findByCity(String city); 
+	
+	Optional<Person> findByFirstNameAndLastName(String firstName, String lastName);
+	void deleteByFirstNameAndLastName(String firstName, String lastName);
 }

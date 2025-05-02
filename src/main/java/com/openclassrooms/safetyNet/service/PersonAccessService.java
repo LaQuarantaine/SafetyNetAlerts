@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 
-import com.openclassrooms.safetyNet.model.Person;
+import com.openclassrooms.safetyNet.model.entity.Person;
 import com.openclassrooms.safetyNet.repository.PersonRepository;
 
 import lombok.RequiredArgsConstructor;

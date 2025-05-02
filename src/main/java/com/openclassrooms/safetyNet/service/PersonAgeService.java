@@ -2,7 +2,7 @@ package com.openclassrooms.safetyNet.service;
 
 import org.springframework.stereotype.Service;
 
-import com.openclassrooms.safetyNet.model.Person;
+import com.openclassrooms.safetyNet.model.entity.Person;
 import com.openclassrooms.safetyNet.repository.MedicalRecordRepository;
 import com.openclassrooms.safetyNet.util.AgeUtil;
 
@@ -24,7 +24,7 @@ public class PersonAgeService {
             .stream()
             .findFirst()
             .map(record -> AgeUtil.calculateAge(record.getBirthdate()))
-            .orElse(null);
+            .orElse(0);
     }
 
     public boolean isChild(Person person) {

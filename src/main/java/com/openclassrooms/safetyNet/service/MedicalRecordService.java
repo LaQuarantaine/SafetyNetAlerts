@@ -1,6 +1,6 @@
 package com.openclassrooms.safetyNet.service;
 
-import com.openclassrooms.safetyNet.model.MedicalRecord;
+import com.openclassrooms.safetyNet.model.entity.MedicalRecord;
 import com.openclassrooms.safetyNet.repository.MedicalRecordRepository;
 
 import lombok.RequiredArgsConstructor;

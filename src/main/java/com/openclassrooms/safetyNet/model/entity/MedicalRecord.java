@@ -1,4 +1,4 @@
-package com.openclassrooms.safetyNet.model;
+package com.openclassrooms.safetyNet.model.entity;
 
 import java.util.List;
 
@@ -10,6 +10,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -30,6 +31,9 @@ public class MedicalRecord {
 	
 	private String birthdate;
 	
+	@ManyToOne
+	private Person person;
+	
 	@Convert(converter = StringListJsonConverter.class)
 	@Column(columnDefinition = "TEXT")
 	private List<String> medications;
@@ -37,4 +41,5 @@ public class MedicalRecord {
 	@Convert(converter = StringListJsonConverter.class)
 	@Column(columnDefinition = "TEXT")
 	private List<String> allergies;
+	
 }
