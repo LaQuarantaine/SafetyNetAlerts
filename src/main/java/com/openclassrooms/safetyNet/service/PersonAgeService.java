@@ -1,9 +1,12 @@
 package com.openclassrooms.safetyNet.service;
 
+import java.util.Optional;
+
 import org.springframework.stereotype.Service;
 
+import com.openclassrooms.safetyNet.dataStore.JsonDataStore;
 import com.openclassrooms.safetyNet.model.Person;
-import com.openclassrooms.safetyNet.repository.MedicalRecordRepository;
+import com.openclassrooms.safetyNet.model.MedicalRecord;
 import com.openclassrooms.safetyNet.util.AgeUtil;
 
 import lombok.RequiredArgsConstructor;
@@ -12,28 +15,29 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class PersonAgeService {
 	
-	private final MedicalRecordRepository medicalRecordRepository;
+	private final JsonDataStore dataStore;
 
     /**
      * Récupère l'âge d'une personne en consultant son dossier médical.
      * Retourne null si aucun dossier médical n'est trouvé.
      */
 	public Integer getAgeForPerson(Person person) {
-        return medicalRecordRepository.findByFirstNameAndLastName(
-                person.getFirstName(), person.getLastName())
-            .stream()
-            .findFirst()
-            .map(record -> AgeUtil.calculateAge(record.getBirthdate()))
-            .orElse(null);
+        return findMedicalRecord(person)
+                .map(record -> AgeUtil.calculateAge(record.getBirthdate()))
+                .orElse(null);
     }
 
     public boolean isChild(Person person) {
-        return medicalRecordRepository.findByFirstNameAndLastName(
-                person.getFirstName(), person.getLastName())
-            .stream()
-            .findFirst()
-            .map(record -> AgeUtil.isChild(record.getBirthdate()))
-            .orElse(false);
+        return findMedicalRecord(person)
+                .map(record -> AgeUtil.isChild(record.getBirthdate()))
+                .orElse(false);
+    }
+    
+    private Optional<MedicalRecord> findMedicalRecord(Person person) {
+        return dataStore.getMedicalRecords().stream()
+                .filter(record -> record.getFirstName().equals(person.getFirstName())
+                        && record.getLastName().equals(person.getLastName()))
+                .findFirst();
     }
 }
 	

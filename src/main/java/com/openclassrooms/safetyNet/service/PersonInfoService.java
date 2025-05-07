@@ -9,18 +9,15 @@ import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 
+import com.openclassrooms.safetyNet.model.Person;
+import com.openclassrooms.safetyNet.dataStore.JsonDataStore;
 import com.openclassrooms.safetyNet.dto.ChildAlertDTO;
 import com.openclassrooms.safetyNet.dto.CommunityEmailDTO;
 import com.openclassrooms.safetyNet.dto.FireResidentDTO;
 import com.openclassrooms.safetyNet.dto.FireResponseDTO;
 import com.openclassrooms.safetyNet.dto.HouseholdMemberDTO;
 import com.openclassrooms.safetyNet.dto.PersonInfoDTO;
-import com.openclassrooms.safetyNet.model.Firestation;
 import com.openclassrooms.safetyNet.model.MedicalRecord;
-import com.openclassrooms.safetyNet.model.Person;
-import com.openclassrooms.safetyNet.repository.FirestationRepository;
-import com.openclassrooms.safetyNet.repository.MedicalRecordRepository;
-import com.openclassrooms.safetyNet.repository.PersonRepository;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -32,10 +29,8 @@ public class PersonInfoService {
 	
 	private final PersonAgeService personAgeService;
 	private final PersonAccessService personAccessService;
-	private final FirestationRepository fireStationRepository;
-	private final MedicalRecordRepository medicalRecordRepository;
 	private final MedicalRecordService medicalRecordService;
-	private final PersonRepository personRepository;
+	private final JsonDataStore dataStore;
 
 	// service pour traiter le endpoint 1
 	public List<ChildAlertDTO> getChildrenByAddress(String address) {
@@ -75,31 +70,27 @@ public class PersonInfoService {
 
 	// service pour traiter le endpoint 4
 	public FireResponseDTO getResidentsByAddressWithMedicalInfo(String address) {
-		log.info("Récupération des résidents avec infos médicales pour l'adresse : {}", address);
-		// 1. Récupérer le numéro de la caserne
-	    Optional<Firestation> stationOpt = fireStationRepository.findByAddress(address).stream().findFirst();
-	    String stationNumber = stationOpt.map(Firestation::getStation).orElse("N/A");
+	    log.info("Récupération des résidents avec infos médicales pour l'adresse : {}", address);
 
-	    // 2. Récupérer les résidents à cette adresse via PersonAccessService 
+	    String stationNumber = dataStore.getFirestations().stream()
+	        .filter(f -> f.getAddress().equals(address))
+	        .map(f -> f.getStation())
+	        .findFirst()
+	        .orElse("N/A");
+
 	    List<Person> residents = personAccessService.getResidentsAtAddress(address);
 
-	    // 3. Mapper chaque résident vers un DTO
 	    List<FireResidentDTO> residentDTOs = residents.stream()
 	        .map(person -> {
-	            Integer age = personAgeService.getAgeForPerson(person);
-	            MedicalRecord record = medicalRecordRepository
-	                .findByFirstNameAndLastName(person.getFirstName(), person.getLastName())
-	                .stream()
-	                .findFirst()
-	                .orElse(null);
+	            Optional<MedicalRecord> recordOpt = medicalRecordService
+	                .getByName(person.getFirstName(), person.getLastName());
 
 	            return new FireResidentDTO(
 	                person.getFirstName(),
 	                person.getLastName(),
 	                person.getPhone(),
-	                age != null ? age : 0,
-	                record != null ? record.getMedications() : List.of(),
-	                record != null ? record.getAllergies() : List.of()
+	                recordOpt.map(MedicalRecord::getMedications).orElse(List.of()),
+	                recordOpt.map(MedicalRecord::getAllergies).orElse(List.of())
 	            );
 	        })
 	        .collect(Collectors.toList());
@@ -108,14 +99,14 @@ public class PersonInfoService {
 	}
 	
 	public List<PersonInfoDTO> getPersonsByLastName(String lastName) {
-	    // 1. Récupérer toutes les personnes ayant ce nom
-	    List<Person> persons = personRepository.findByLastName(lastName);
+	    List<Person> persons = dataStore.getPersons().stream()
+	        .filter(p -> p.getLastName().equals(lastName))
+	        .collect(Collectors.toList());
 
-	    // 2. Pour chaque personne, construire le DTO enrichi
 	    return persons.stream()
 	        .map(person -> {
 	            Optional<MedicalRecord> medicalRecord = medicalRecordService
-	                    .getByName(person.getFirstName(), person.getLastName());
+	                .getByName(person.getFirstName(), person.getLastName());
 
 	            int age = personAgeService.getAgeForPerson(person);
 

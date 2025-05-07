@@ -2,12 +2,12 @@ package com.openclassrooms.safetyNet.bootstrap;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.openclassrooms.safetyNet.dataStore.JsonDataStore;
 import com.openclassrooms.safetyNet.model.DataWrapper;
-import com.openclassrooms.safetyNet.repository.FirestationRepository;
-import com.openclassrooms.safetyNet.repository.MedicalRecordRepository;
-import com.openclassrooms.safetyNet.repository.PersonRepository;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -28,25 +28,19 @@ import java.io.InputStream;
  */
 
 @Component // Rend la classe détectable automatiquement par Spring
+@RequiredArgsConstructor
+@Slf4j
 public class DataLoader implements CommandLineRunner {
 
-	
-		// Injection des repositories Spring pour accéder aux tables
-	    @Autowired private FirestationRepository firestationRepository;
-	    @Autowired private MedicalRecordRepository medicalRecordRepository;
-	    @Autowired private PersonRepository personRepository;
-
-	    
-	    
-	    /*
-	     * Méthode run() appelée automatiquement au démarrage de l'application.
-	     * Elle contient la logique de lecture et d'insertion des données.
-	    */
+		private final JsonDataStore dataStore;
 	
 
-		
+	    //interface fonctionnelle (contient 1 seule méthode "run") SpringBoot 
+	    // permet d'exécuter du code automatiquement au lancement de l'appli
+	    
 	    @Override
 	    public void run(String... args) throws Exception {
+	    	log.info("Chargement des données depuis data.json...");
 	    	
 	    	// Création d'un ObjectMapper (outil de la bibliothèque Jackson)
 	        ObjectMapper mapper = new ObjectMapper();
@@ -59,26 +53,22 @@ public class DataLoader implements CommandLineRunner {
 	            return;
 	        }
 	        
-	   /*
+	        /*
 	         * Lecture du fichier data.json avec Jacksonet conversion en un objet DataWrapper,
 	         * Ce wrapper contient 3 listes : List<Person> persons, List<Firestation> firestations
 	         * et List<MedicalRecord> medicalrecords
-	*/
+	         */
 	        DataWrapper data = mapper.readValue(is, DataWrapper.class);
 
-	        // Supprime les données existantes pour éviter les doublons
-	        personRepository.deleteAll();
-	        medicalRecordRepository.deleteAll();
-	        firestationRepository.deleteAll();
-
-	        // Insère les nouvelles données via les repository
-	        personRepository.saveAll(data.getPersons());
-	        medicalRecordRepository.saveAll(data.getMedicalrecords());
-	        firestationRepository.saveAll(data.getFirestations());
-
-	        System.out.println("Données JSON insérées dans MySQL avec succès.");
-      
-
+	        dataStore.setPersons(data.getPersons());
+	        dataStore.setFirestations(data.getFirestations());
+	        dataStore.setMedicalRecords(data.getMedicalrecords());
+	        
+	        log.info("Données JSON chargées en mémoire avec succès : {} personnes, {} casernes, {} dossiers médicaux",
+	                data.getPersons().size(),
+	                data.getFirestations().size(),
+	                data.getMedicalrecords().size());
 	    }
+  
 	}
 

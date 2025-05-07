@@ -2,10 +2,12 @@ package com.openclassrooms.safetyNet.controller;
 
 import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,7 +18,8 @@ import com.openclassrooms.safetyNet.dto.FireResponseDTO;
 import com.openclassrooms.safetyNet.dto.PersonInfoDTO;
 import com.openclassrooms.safetyNet.service.FirestationLogicService;
 import com.openclassrooms.safetyNet.service.PersonInfoService;
-
+import com.openclassrooms.safetyNet.service.PersonService;
+import com.openclassrooms.safetyNet.dto.PersonDTO;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -26,20 +29,21 @@ import lombok.extern.slf4j.Slf4j;
 @RequiredArgsConstructor
 @Slf4j
 public class PersonController {
-	private static final Logger logger = LoggerFactory.getLogger(PersonController.class);
-	private final PersonInfoService personInfoService;
-	private final FirestationLogicService firestationLogicService; 
 
+	private final PersonInfoService personInfoService;
+	private final PersonService personService;
+	private final FirestationLogicService firestationLogicService; 
+	
 	
 	@GetMapping("/childAlert")	// endpoint 2
 	public ResponseEntity<?> getChildAlert(@RequestParam String address) {
-		logger.info("Entrée requête GET /childAlert?address={}", address);
+		log.info("Entrée requête GET /childAlert?address={}", address);
 	    List<ChildAlertDTO> result = personInfoService.getChildrenByAddress(address);
 	    if (result.isEmpty()) {	// Gère le cas où aucun enfant n’est trouvé
-	    	logger.info("Aucun enfant trouvé pour l'adresse : {}", address);
+	    	log.info("Aucun enfant trouvé pour l'adresse : {}", address);
 	        return ResponseEntity.ok("No children found at this address."); // renvoi une chaine vide " "
 	    }
-	    logger.info("{} enfant(s) trouvé(s) à l'adresse : {}", result.size(), address);
+	    log.info("{} enfant(s) trouvé(s) à l'adresse : {}", result.size(), address);
 	    return ResponseEntity.ok(result); // si ok renvoi la liste en JSON
 	}
 	
@@ -65,5 +69,37 @@ public class PersonController {
 		List<CommunityEmailDTO> emails = personInfoService.getEmailByCity(city);
 		log.info("Réponse avec {} email(s) trouvé(s)", emails.size());
 		return ResponseEntity.ok(emails);
+	}
+	
+	
+	@PostMapping("/person")    // POST : Ajouter une personne
+	public ResponseEntity<PersonDTO> addPerson(@RequestBody PersonDTO personDTO) {
+	    log.info("Requête POST /person avec données : {}", personDTO);
+	    PersonDTO createdPerson = personService.addPerson(personDTO);
+	    return ResponseEntity.ok(createdPerson);
+	}
+
+		
+	@PutMapping("/person")     // PUT : Mettre à jour une personne
+	public ResponseEntity<?> updatePerson(@RequestParam String firstName,
+	                                      @RequestParam String lastName,
+	                                      @RequestBody PersonDTO personDTO) {
+	    log.info("Requête PUT /person pour {} {}", firstName, lastName);
+	    return personService.updatePerson(firstName, lastName, personDTO)
+	            .map(updated -> ResponseEntity.ok(updated))
+	            .orElseGet(() -> ResponseEntity.notFound().build());
+	}
+	
+	
+	@DeleteMapping("/person")   // DELETE : Supprimer une personne
+	public ResponseEntity<?> deletePerson(@RequestParam String firstName,
+	                                      @RequestParam String lastName) {
+	    log.info("Requête DELETE /person pour {} {}", firstName, lastName);
+	    boolean deleted = personService.deletePerson(firstName, lastName);
+	    if (deleted) {
+	        return ResponseEntity.ok().build();
+	    } else {
+	        return ResponseEntity.notFound().build();
+	    }
 	}
 }
