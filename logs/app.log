@@ -13490,3 +13490,515 @@ Identify and stop the process that's listening on port 8080 or configure this ap
 2025-05-07 01:46:20 [http-nio-8080-exec-9] INFO  com.openclassrooms.safetyNet.service.JsonFileService - Données enregistrées avec succès dans src/main/resources/data.json
 2025-05-07 01:46:23 [http-nio-8080-exec-10] INFO  com.openclassrooms.safetyNet.controller.MedicalRecordController - DELETE /medicalRecord pour virginie delort
 2025-05-07 01:46:23 [http-nio-8080-exec-10] INFO  com.openclassrooms.safetyNet.service.JsonFileService - Données enregistrées avec succès dans src/main/resources/data.json
+2025-05-07 10:37:44 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - Starting SafetyNetApplication using Java 17.0.12 with PID 9140 (C:\Users\cvign\eclipse-workspace\safetyNetAlerts\target\classes started by cvign in C:\Users\cvign\eclipse-workspace\safetyNetAlerts)
+2025-05-07 10:37:44 [main] DEBUG com.openclassrooms.safetyNet.SafetyNetApplication - Running with Spring Boot v3.1.6, Spring v6.0.14
+2025-05-07 10:37:44 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-07 10:37:45 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-05-07 10:37:45 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-07 10:37:45 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-07 10:37:45 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-05-07 10:37:45 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-07 10:37:46 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-07 10:37:46 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-07 10:37:46 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - Started SafetyNetApplication in 1.636 seconds (process running for 2.157)
+2025-05-07 10:37:46 [main] INFO  com.openclassrooms.safetyNet.bootstrap.DataLoader - Chargement des données depuis data.json...
+2025-05-07 10:37:46 [main] INFO  com.openclassrooms.safetyNet.bootstrap.DataLoader - Données JSON chargées en mémoire avec succès : 23 personnes, 13 casernes, 23 dossiers médicaux
+2025-05-09 17:02:08 [main] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Recherche des enfants à l'adresse : 123 Rue
+2025-05-09 17:02:08 [main] DEBUG com.openclassrooms.safetyNet.service.PersonInfoService - 2 résident(s) trouvé(s) à cette adresse
+2025-05-09 17:02:08 [main] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Nombre d'enfants trouvés à l'adresse 123 Rue : 1
+2025-05-12 09:37:12 [main] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Recherche des enfants à l'adresse : 18 rue des Pivoines
+2025-05-12 09:37:12 [main] DEBUG com.openclassrooms.safetyNet.service.PersonInfoService - 3 résident(s) trouvé(s) à cette adresse
+2025-05-12 09:37:52 [main] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Recherche des enfants à l'adresse : 18 rue des Pivoines
+2025-05-12 09:37:52 [main] DEBUG com.openclassrooms.safetyNet.service.PersonInfoService - 3 résident(s) trouvé(s) à cette adresse
+2025-05-12 09:37:52 [main] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Nombre d'enfants trouvés à l'adresse 18 rue des Pivoines : 1
+2025-05-12 09:38:38 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - Starting SafetyNetApplication using Java 17.0.12 with PID 31588 (C:\Users\cvign\eclipse-workspace\safetyNetAlerts\target\classes started by cvign in C:\Users\cvign\eclipse-workspace\safetyNetAlerts)
+2025-05-12 09:38:38 [main] DEBUG com.openclassrooms.safetyNet.SafetyNetApplication - Running with Spring Boot v3.1.6, Spring v6.0.14
+2025-05-12 09:38:38 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 09:38:40 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-05-12 09:38:40 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 09:38:40 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 09:38:40 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-05-12 09:38:40 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 09:38:41 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-12 09:38:41 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-12 09:38:41 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - Started SafetyNetApplication in 2.977 seconds (process running for 4.265)
+2025-05-12 09:38:41 [main] INFO  com.openclassrooms.safetyNet.bootstrap.DataLoader - Chargement des données depuis data.json...
+2025-05-12 09:38:41 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:774) ~[spring-boot-3.1.6.jar:3.1.6]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:755) [spring-boot-3.1.6.jar:3.1.6]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) ~[?:?]
+	at java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) ~[?:?]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) ~[?:?]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[?:?]
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) ~[?:?]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) ~[?:?]
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:?]
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[?:?]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:750) [spring-boot-3.1.6.jar:3.1.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323) [spring-boot-3.1.6.jar:3.1.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) [spring-boot-3.1.6.jar:3.1.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) [spring-boot-3.1.6.jar:3.1.6]
+	at com.openclassrooms.safetyNet.SafetyNetApplication.main(SafetyNetApplication.java:11) [classes/:?]
+Caused by: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "id" (class com.openclassrooms.safetyNet.model.Person), not marked as ignorable (7 known properties: "lastName", "address", "firstName", "email", "phone", "zip", "city"])
+ at [Source: (BufferedInputStream); line: 3, column: 13] (through reference chain: com.openclassrooms.safetyNet.model.DataWrapper["persons"]->java.util.ArrayList[0]->com.openclassrooms.safetyNet.model.Person["id"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1138) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2224) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1709) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1687) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:320) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:359) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:244) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:28) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:129) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:314) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4825) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3809) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.openclassrooms.safetyNet.bootstrap.DataLoader.run(DataLoader.java:48) ~[classes/:?]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771) ~[spring-boot-3.1.6.jar:3.1.6]
+	... 14 more
+2025-05-12 09:39:08 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - Starting SafetyNetApplication using Java 17.0.12 with PID 29196 (C:\Users\cvign\eclipse-workspace\safetyNetAlerts\target\classes started by cvign in C:\Users\cvign\eclipse-workspace\safetyNetAlerts)
+2025-05-12 09:39:08 [main] DEBUG com.openclassrooms.safetyNet.SafetyNetApplication - Running with Spring Boot v3.1.6, Spring v6.0.14
+2025-05-12 09:39:08 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 09:39:09 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-05-12 09:39:09 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 09:39:09 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 09:39:09 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-05-12 09:39:09 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 09:39:10 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-12 09:39:10 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-12 09:39:10 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - Started SafetyNetApplication in 1.656 seconds (process running for 2.243)
+2025-05-12 09:39:10 [main] INFO  com.openclassrooms.safetyNet.bootstrap.DataLoader - Chargement des données depuis data.json...
+2025-05-12 09:39:10 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:774) ~[spring-boot-3.1.6.jar:3.1.6]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$3(SpringApplication.java:755) [spring-boot-3.1.6.jar:3.1.6]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) ~[?:?]
+	at java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) ~[?:?]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510) ~[?:?]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[?:?]
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) ~[?:?]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) ~[?:?]
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:?]
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[?:?]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:750) [spring-boot-3.1.6.jar:3.1.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323) [spring-boot-3.1.6.jar:3.1.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) [spring-boot-3.1.6.jar:3.1.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) [spring-boot-3.1.6.jar:3.1.6]
+	at com.openclassrooms.safetyNet.SafetyNetApplication.main(SafetyNetApplication.java:11) [classes/:?]
+Caused by: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "id" (class com.openclassrooms.safetyNet.model.Person), not marked as ignorable (7 known properties: "lastName", "address", "firstName", "email", "phone", "zip", "city"])
+ at [Source: (BufferedInputStream); line: 3, column: 13] (through reference chain: com.openclassrooms.safetyNet.model.DataWrapper["persons"]->java.util.ArrayList[0]->com.openclassrooms.safetyNet.model.Person["id"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1138) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2224) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1709) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1687) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:320) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:359) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:244) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:28) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:129) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:314) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:177) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4825) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3809) ~[jackson-databind-2.15.3.jar:2.15.3]
+	at com.openclassrooms.safetyNet.bootstrap.DataLoader.run(DataLoader.java:48) ~[classes/:?]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771) ~[spring-boot-3.1.6.jar:3.1.6]
+	... 14 more
+2025-05-12 09:42:37 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - Starting SafetyNetApplication using Java 17.0.12 with PID 30676 (C:\Users\cvign\eclipse-workspace\safetyNetAlerts\target\classes started by cvign in C:\Users\cvign\eclipse-workspace\safetyNetAlerts)
+2025-05-12 09:42:37 [main] DEBUG com.openclassrooms.safetyNet.SafetyNetApplication - Running with Spring Boot v3.1.6, Spring v6.0.14
+2025-05-12 09:42:37 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 09:42:38 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-05-12 09:42:38 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 09:42:38 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 09:42:38 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-05-12 09:42:38 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 09:42:39 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-12 09:42:39 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-12 09:42:39 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - Started SafetyNetApplication in 1.588 seconds (process running for 2.09)
+2025-05-12 09:42:39 [main] INFO  com.openclassrooms.safetyNet.bootstrap.DataLoader - Chargement des données depuis data.json...
+2025-05-12 09:42:39 [main] INFO  com.openclassrooms.safetyNet.bootstrap.DataLoader - Données JSON chargées en mémoire avec succès : 23 personnes, 13 casernes, 23 dossiers médicaux
+2025-05-12 09:47:09 [main] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Recherche des enfants à l'adresse : 18 rue des Pivoines
+2025-05-12 09:47:09 [main] DEBUG com.openclassrooms.safetyNet.service.PersonInfoService - 3 résident(s) trouvé(s) à cette adresse
+2025-05-12 09:47:09 [main] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Nombre d'enfants trouvés à l'adresse 18 rue des Pivoines : 1
+2025-05-12 09:51:23 [main] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Recherche des enfants � l'adresse : 18 rue des Pivoines
+2025-05-12 09:51:23 [main] DEBUG com.openclassrooms.safetyNet.service.PersonInfoService - 3 r�sident(s) trouv�(s) � cette adresse
+2025-05-12 09:51:23 [main] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Nombre d'enfants trouv�s � l'adresse 18 rue des Pivoines : 1
+2025-05-12 10:33:34 [main] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Récupération des résidents avec infos médicales pour l'adresse : 18 rue des Pivoines
+2025-05-12 10:33:35 [main] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Recherche des enfants à l'adresse : 18 rue des Pivoines
+2025-05-12 10:33:35 [main] DEBUG com.openclassrooms.safetyNet.service.PersonInfoService - 3 résident(s) trouvé(s) à cette adresse
+2025-05-12 10:33:35 [main] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Nombre d'enfants trouvés à l'adresse 18 rue des Pivoines : 1
+2025-05-12 10:34:59 [main] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Récupération des résidents avec infos médicales pour l'adresse : 18 rue des Pivoines
+2025-05-12 10:34:59 [main] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Recherche des enfants à l'adresse : 18 rue des Pivoines
+2025-05-12 10:34:59 [main] DEBUG com.openclassrooms.safetyNet.service.PersonInfoService - 3 résident(s) trouvé(s) à cette adresse
+2025-05-12 10:34:59 [main] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Nombre d'enfants trouvés à l'adresse 18 rue des Pivoines : 1
+2025-05-12 10:38:48 [main] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Récupération des résidents avec infos médicales pour l'adresse : 18 rue des Pivoines
+2025-05-12 10:38:48 [main] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Recherche des enfants à l'adresse : 18 rue des Pivoines
+2025-05-12 10:38:48 [main] DEBUG com.openclassrooms.safetyNet.service.PersonInfoService - 3 résident(s) trouvé(s) à cette adresse
+2025-05-12 10:38:48 [main] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Nombre d'enfants trouvés à l'adresse 18 rue des Pivoines : 1
+2025-05-12 14:07:36 [main] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - R�cup�ration des r�sidents avec infos m�dicales pour l'adresse : 18 rue des Pivoines
+2025-05-12 14:07:36 [main] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Recherche des enfants � l'adresse : 18 rue des Pivoines
+2025-05-12 14:07:36 [main] DEBUG com.openclassrooms.safetyNet.service.PersonInfoService - 3 r�sident(s) trouv�(s) � cette adresse
+2025-05-12 14:07:36 [main] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Nombre d'enfants trouv�s � l'adresse 18 rue des Pivoines : 1
+2025-05-12 14:09:40 [main] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - R�cup�ration des r�sidents avec infos m�dicales pour l'adresse : 18 rue des Pivoines
+2025-05-12 14:09:40 [main] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Recherche des enfants � l'adresse : 18 rue des Pivoines
+2025-05-12 14:09:40 [main] DEBUG com.openclassrooms.safetyNet.service.PersonInfoService - 3 r�sident(s) trouv�(s) � cette adresse
+2025-05-12 14:09:40 [main] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Nombre d'enfants trouv�s � l'adresse 18 rue des Pivoines : 1
+2025-05-12 14:10:02 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - Starting SafetyNetApplication using Java 17.0.12 with PID 26184 (C:\Users\cvign\eclipse-workspace\safetyNetAlerts\target\classes started by cvign in C:\Users\cvign\eclipse-workspace\safetyNetAlerts)
+2025-05-12 14:10:02 [main] DEBUG com.openclassrooms.safetyNet.SafetyNetApplication - Running with Spring Boot v3.1.6, Spring v6.0.14
+2025-05-12 14:10:02 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 14:10:03 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-05-12 14:10:03 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 14:10:03 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 14:10:03 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-05-12 14:10:03 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 14:10:03 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-12 14:10:03 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-12 14:10:03 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - Started SafetyNetApplication in 1.702 seconds (process running for 2.292)
+2025-05-12 14:10:03 [main] INFO  com.openclassrooms.safetyNet.bootstrap.DataLoader - Chargement des données depuis data.json...
+2025-05-12 14:10:04 [main] INFO  com.openclassrooms.safetyNet.bootstrap.DataLoader - Données JSON chargées en mémoire avec succès : 23 personnes, 13 casernes, 23 dossiers médicaux
+2025-05-12 14:10:18 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-12 14:10:18 [http-nio-8080-exec-1] INFO  com.openclassrooms.safetyNet.controller.PersonController - Requête GET /person/fire?address=947 E. Rose Dr
+2025-05-12 14:10:18 [http-nio-8080-exec-1] INFO  com.openclassrooms.safetyNet.controller.PersonController - Réponse avec 3 résident(s) à l'adresse 947 E. Rose Dr
+2025-05-12 14:10:27 [http-nio-8080-exec-2] INFO  com.openclassrooms.safetyNet.controller.FirestationController - Entrée requête GET /phoneAlert?firestation=1
+2025-05-12 14:10:27 [http-nio-8080-exec-2] INFO  com.openclassrooms.safetyNet.controller.FirestationController - Sortie réponse avec 3 numéro(s) de téléphone
+2025-05-12 14:10:30 [http-nio-8080-exec-4] INFO  com.openclassrooms.safetyNet.controller.PersonController - Entrée requête GET /childAlert?address=892 Downing Ct
+2025-05-12 14:10:30 [http-nio-8080-exec-4] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Recherche des enfants à l'adresse : 892 Downing Ct
+2025-05-12 14:10:30 [http-nio-8080-exec-4] DEBUG com.openclassrooms.safetyNet.service.PersonInfoService - 3 résident(s) trouvé(s) à cette adresse
+2025-05-12 14:10:30 [http-nio-8080-exec-4] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Nombre d'enfants trouvés à l'adresse 892 Downing Ct : 1
+2025-05-12 14:10:30 [http-nio-8080-exec-4] INFO  com.openclassrooms.safetyNet.controller.PersonController - 1 enfant(s) trouvé(s) à l'adresse : 892 Downing Ct
+2025-05-12 14:10:35 [http-nio-8080-exec-5] INFO  com.openclassrooms.safetyNet.controller.FirestationController - Entrée requête GET /firestation?stationNumber=3
+2025-05-12 14:10:35 [http-nio-8080-exec-5] INFO  com.openclassrooms.safetyNet.service.FirestationLogicService - Recherche des personnes couvertes par la caserne n°3
+2025-05-12 14:10:35 [http-nio-8080-exec-5] DEBUG com.openclassrooms.safetyNet.service.FirestationLogicService - 11 personne(s) trouvée(s) à ces adresses
+2025-05-12 14:10:35 [http-nio-8080-exec-5] INFO  com.openclassrooms.safetyNet.service.FirestationLogicService - Résultat : 8 adultes, 3 enfants couverts
+2025-05-12 14:10:35 [http-nio-8080-exec-5] INFO  com.openclassrooms.safetyNet.controller.FirestationController - Sortie réponse avec 11 personnes
+2025-05-12 14:10:39 [http-nio-8080-exec-7] INFO  com.openclassrooms.safetyNet.controller.FirestationController - Requête GET /flood/stations?stations=[2, 3]
+2025-05-12 14:10:39 [http-nio-8080-exec-7] INFO  com.openclassrooms.safetyNet.controller.FirestationController - Réponse avec 7 adresse(s) impactée(s)
+2025-05-12 14:10:43 [http-nio-8080-exec-8] INFO  com.openclassrooms.safetyNet.controller.PersonController - Requête GET /personInfo?lastName=Boyd
+2025-05-12 14:10:43 [http-nio-8080-exec-8] INFO  com.openclassrooms.safetyNet.controller.PersonController - Réponse avec 6 personne(s) trouvée(s)
+2025-05-12 14:10:47 [http-nio-8080-exec-6] INFO  com.openclassrooms.safetyNet.controller.PersonController - Requete GET /communityEmail?city=Culver
+2025-05-12 14:10:47 [http-nio-8080-exec-6] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Recherche des emails par ville : Culver
+2025-05-12 14:10:47 [http-nio-8080-exec-6] DEBUG com.openclassrooms.safetyNet.service.PersonInfoService - 23 résident(s) trouvé(s) dans cette ville
+2025-05-12 14:10:47 [http-nio-8080-exec-6] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Nombre d'emails uniques trouvés pour la ville Culver : 15
+2025-05-12 14:10:47 [http-nio-8080-exec-6] INFO  com.openclassrooms.safetyNet.controller.PersonController - Réponse avec 15 email(s) trouvé(s)
+2025-05-12 14:11:34 [http-nio-8080-exec-3] INFO  com.openclassrooms.safetyNet.controller.FirestationController - POST /firestation avec données: com.openclassrooms.safetyNet.dto.FirestationDTO@5b234e4d
+2025-05-12 14:11:34 [http-nio-8080-exec-3] INFO  com.openclassrooms.safetyNet.service.JsonFileService - Données enregistrées avec succès dans src/main/resources/data.json
+2025-05-12 14:11:45 [http-nio-8080-exec-1] INFO  com.openclassrooms.safetyNet.controller.FirestationController - PUT /firestation pour address=947 E. Rose Dr et nouveau numéro=10
+2025-05-12 14:11:45 [http-nio-8080-exec-1] INFO  com.openclassrooms.safetyNet.service.JsonFileService - Données enregistrées avec succès dans src/main/resources/data.json
+2025-05-12 14:12:04 [http-nio-8080-exec-2] INFO  com.openclassrooms.safetyNet.controller.FirestationController - DELETE /firestation pour address=1509 Street Food
+2025-05-12 14:12:04 [http-nio-8080-exec-2] INFO  com.openclassrooms.safetyNet.service.JsonFileService - Données enregistrées avec succès dans src/main/resources/data.json
+2025-05-12 14:12:40 [http-nio-8080-exec-4] INFO  com.openclassrooms.safetyNet.controller.FirestationController - POST /firestation avec données: com.openclassrooms.safetyNet.dto.FirestationDTO@127ccff5
+2025-05-12 14:12:40 [http-nio-8080-exec-4] INFO  com.openclassrooms.safetyNet.service.JsonFileService - Données enregistrées avec succès dans src/main/resources/data.json
+2025-05-12 14:13:50 [http-nio-8080-exec-8] INFO  com.openclassrooms.safetyNet.controller.FirestationController - DELETE /firestation pour address=1509 Street Food
+2025-05-12 14:13:50 [http-nio-8080-exec-8] INFO  com.openclassrooms.safetyNet.service.JsonFileService - Données enregistrées avec succès dans src/main/resources/data.json
+2025-05-12 14:17:22 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - Starting SafetyNetApplication using Java 17.0.12 with PID 7368 (C:\Users\cvign\eclipse-workspace\safetyNetAlerts\target\classes started by cvign in C:\Users\cvign\eclipse-workspace\safetyNetAlerts)
+2025-05-12 14:17:22 [main] DEBUG com.openclassrooms.safetyNet.SafetyNetApplication - Running with Spring Boot v3.1.6, Spring v6.0.14
+2025-05-12 14:17:22 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 14:17:23 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-05-12 14:17:23 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 14:17:23 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 14:17:23 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-05-12 14:17:23 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 14:17:23 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-12 14:17:23 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-12 14:17:23 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - Started SafetyNetApplication in 1.592 seconds (process running for 2.121)
+2025-05-12 14:17:23 [main] INFO  com.openclassrooms.safetyNet.bootstrap.DataLoader - Chargement des données depuis data.json...
+2025-05-12 14:17:24 [main] INFO  com.openclassrooms.safetyNet.bootstrap.DataLoader - Données JSON chargées en mémoire avec succès : 23 personnes, 13 casernes, 23 dossiers médicaux
+2025-05-12 14:18:40 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - Starting SafetyNetApplication using Java 17.0.12 with PID 13800 (C:\Users\cvign\eclipse-workspace\safetyNetAlerts\target\classes started by cvign in C:\Users\cvign\eclipse-workspace\safetyNetAlerts)
+2025-05-12 14:18:40 [main] DEBUG com.openclassrooms.safetyNet.SafetyNetApplication - Running with Spring Boot v3.1.6, Spring v6.0.14
+2025-05-12 14:18:40 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 14:18:41 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-05-12 14:18:41 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 14:18:41 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 14:18:41 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-05-12 14:18:41 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 14:18:41 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-12 14:18:41 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-12 14:18:41 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - Started SafetyNetApplication in 1.654 seconds (process running for 2.204)
+2025-05-12 14:18:41 [main] INFO  com.openclassrooms.safetyNet.bootstrap.DataLoader - Chargement des données depuis data.json...
+2025-05-12 14:18:41 [main] INFO  com.openclassrooms.safetyNet.bootstrap.DataLoader - Données JSON chargées en mémoire avec succès : 23 personnes, 13 casernes, 23 dossiers médicaux
+2025-05-12 14:20:02 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - Starting SafetyNetApplication using Java 17.0.12 with PID 1128 (C:\Users\cvign\eclipse-workspace\safetyNetAlerts\target\classes started by cvign in C:\Users\cvign\eclipse-workspace\safetyNetAlerts)
+2025-05-12 14:20:02 [main] DEBUG com.openclassrooms.safetyNet.SafetyNetApplication - Running with Spring Boot v3.1.6, Spring v6.0.14
+2025-05-12 14:20:02 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 14:20:02 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-05-12 14:20:02 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 14:20:02 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 14:20:02 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-05-12 14:20:03 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 14:20:03 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-12 14:20:03 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-12 14:20:03 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - Started SafetyNetApplication in 1.669 seconds (process running for 2.195)
+2025-05-12 14:20:03 [main] INFO  com.openclassrooms.safetyNet.bootstrap.DataLoader - Chargement des données depuis data.json...
+2025-05-12 14:20:03 [main] INFO  com.openclassrooms.safetyNet.bootstrap.DataLoader - Données JSON chargées en mémoire avec succès : 23 personnes, 13 casernes, 23 dossiers médicaux
+2025-05-12 14:22:41 [http-nio-8080-exec-8] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-12 14:22:41 [http-nio-8080-exec-8] INFO  com.openclassrooms.safetyNet.controller.PersonController - Requête GET /personInfo?lastName=Boyd
+2025-05-12 14:22:41 [http-nio-8080-exec-8] INFO  com.openclassrooms.safetyNet.controller.PersonController - Réponse avec 6 personne(s) trouvée(s)
+2025-05-12 14:22:57 [http-nio-8080-exec-7] INFO  com.openclassrooms.safetyNet.controller.PersonController - Requete GET /communityEmail?city=Culver
+2025-05-12 14:22:57 [http-nio-8080-exec-7] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Recherche des emails par ville : Culver
+2025-05-12 14:22:57 [http-nio-8080-exec-7] DEBUG com.openclassrooms.safetyNet.service.PersonInfoService - 23 résident(s) trouvé(s) dans cette ville
+2025-05-12 14:22:57 [http-nio-8080-exec-7] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Nombre d'emails uniques trouvés pour la ville Culver : 15
+2025-05-12 14:22:57 [http-nio-8080-exec-7] INFO  com.openclassrooms.safetyNet.controller.PersonController - Réponse avec 15 email(s) trouvé(s)
+2025-05-12 14:30:40 [main] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - R�cup�ration des r�sidents avec infos m�dicales pour l'adresse : 18 rue des Pivoines
+2025-05-12 14:30:40 [main] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Recherche des enfants � l'adresse : 18 rue des Pivoines
+2025-05-12 14:30:40 [main] DEBUG com.openclassrooms.safetyNet.service.PersonInfoService - 3 r�sident(s) trouv�(s) � cette adresse
+2025-05-12 14:30:40 [main] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Nombre d'enfants trouv�s � l'adresse 18 rue des Pivoines : 1
+2025-05-12 14:30:56 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - Starting SafetyNetApplication using Java 17.0.12 with PID 1788 (C:\Users\cvign\eclipse-workspace\safetyNetAlerts\target\classes started by cvign in C:\Users\cvign\eclipse-workspace\safetyNetAlerts)
+2025-05-12 14:30:56 [main] DEBUG com.openclassrooms.safetyNet.SafetyNetApplication - Running with Spring Boot v3.1.6, Spring v6.0.14
+2025-05-12 14:30:56 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 14:30:57 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-05-12 14:30:57 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 14:30:57 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 14:30:57 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-05-12 14:30:57 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 14:30:57 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-12 14:30:57 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-12 14:30:57 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - Started SafetyNetApplication in 1.692 seconds (process running for 2.198)
+2025-05-12 14:30:57 [main] INFO  com.openclassrooms.safetyNet.bootstrap.DataLoader - Chargement des données depuis data.json...
+2025-05-12 14:30:57 [main] INFO  com.openclassrooms.safetyNet.bootstrap.DataLoader - Données JSON chargées en mémoire avec succès : 23 personnes, 13 casernes, 23 dossiers médicaux
+2025-05-12 14:31:05 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-12 14:31:05 [http-nio-8080-exec-1] INFO  com.openclassrooms.safetyNet.controller.PersonController - Requête GET /person/fire?address=947 E. Rose Dr
+2025-05-12 14:31:05 [http-nio-8080-exec-1] INFO  com.openclassrooms.safetyNet.controller.PersonController - Réponse avec 3 résident(s) à l'adresse 947 E. Rose Dr
+2025-05-12 14:36:51 [main] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - R�cup�ration des r�sidents avec infos m�dicales pour l'adresse : 18 rue des Pivoines
+2025-05-12 14:36:51 [main] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Recherche des enfants � l'adresse : 18 rue des Pivoines
+2025-05-12 14:36:51 [main] DEBUG com.openclassrooms.safetyNet.service.PersonInfoService - 3 r�sident(s) trouv�(s) � cette adresse
+2025-05-12 14:36:51 [main] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Nombre d'enfants trouv�s � l'adresse 18 rue des Pivoines : 1
+2025-05-12 14:37:04 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - Starting SafetyNetApplication using Java 17.0.12 with PID 32244 (C:\Users\cvign\eclipse-workspace\safetyNetAlerts\target\classes started by cvign in C:\Users\cvign\eclipse-workspace\safetyNetAlerts)
+2025-05-12 14:37:04 [main] DEBUG com.openclassrooms.safetyNet.SafetyNetApplication - Running with Spring Boot v3.1.6, Spring v6.0.14
+2025-05-12 14:37:04 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 14:37:05 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-05-12 14:37:05 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 14:37:05 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 14:37:05 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-05-12 14:37:05 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 14:37:06 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-12 14:37:06 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-12 14:37:06 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - Started SafetyNetApplication in 1.688 seconds (process running for 2.186)
+2025-05-12 14:37:06 [main] INFO  com.openclassrooms.safetyNet.bootstrap.DataLoader - Chargement des données depuis data.json...
+2025-05-12 14:37:06 [main] INFO  com.openclassrooms.safetyNet.bootstrap.DataLoader - Données JSON chargées en mémoire avec succès : 23 personnes, 13 casernes, 23 dossiers médicaux
+2025-05-12 14:37:12 [http-nio-8080-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-12 14:37:12 [http-nio-8080-exec-2] INFO  com.openclassrooms.safetyNet.controller.PersonController - Requête GET /person/fire?address=947 E. Rose Dr
+2025-05-12 14:37:12 [http-nio-8080-exec-2] INFO  com.openclassrooms.safetyNet.controller.PersonController - Réponse avec 3 résident(s) à l'adresse 947 E. Rose Dr
+2025-05-12 14:37:30 [http-nio-8080-exec-5] INFO  com.openclassrooms.safetyNet.controller.FirestationController - Entrée requête GET /phoneAlert?firestation=1
+2025-05-12 14:37:30 [http-nio-8080-exec-5] INFO  com.openclassrooms.safetyNet.controller.FirestationController - Sortie réponse avec 3 numéro(s) de téléphone
+2025-05-12 14:40:46 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - Starting SafetyNetApplication using Java 17.0.12 with PID 35244 (C:\Users\cvign\eclipse-workspace\safetyNetAlerts\target\classes started by cvign in C:\Users\cvign\eclipse-workspace\safetyNetAlerts)
+2025-05-12 14:40:46 [main] DEBUG com.openclassrooms.safetyNet.SafetyNetApplication - Running with Spring Boot v3.1.6, Spring v6.0.14
+2025-05-12 14:40:46 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 14:40:47 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-05-12 14:40:47 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 14:40:47 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 14:40:47 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-05-12 14:40:47 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 14:40:47 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-05-12 14:40:47 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - 18 mappings in 'requestMappingHandlerMapping'
+2025-05-12 14:40:47 [main] DEBUG org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-05-12 14:40:47 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-05-12 14:40:47 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-12 14:40:47 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-12 14:40:47 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - Started SafetyNetApplication in 1.6 seconds (process running for 2.183)
+2025-05-12 14:40:47 [main] INFO  com.openclassrooms.safetyNet.bootstrap.DataLoader - Chargement des données depuis data.json...
+2025-05-12 14:40:47 [main] INFO  com.openclassrooms.safetyNet.bootstrap.DataLoader - Données JSON chargées en mémoire avec succès : 23 personnes, 13 casernes, 23 dossiers médicaux
+2025-05-12 14:41:05 [http-nio-8080-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-12 14:41:05 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-12 14:41:05 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2025-05-12 14:41:05 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2025-05-12 14:41:05 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2025-05-12 14:41:05 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@4cc4ac7d
+2025-05-12 14:41:05 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@5d2d1dc2
+2025-05-12 14:41:05 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-05-12 14:41:05 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-05-12 14:41:05 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/fire?address=947%20E.%20Rose%20Dr", parameters={masked}
+2025-05-12 14:41:05 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.openclassrooms.safetyNet.controller.PersonController#getFireInfo(String)
+2025-05-12 14:41:05 [http-nio-8080-exec-2] INFO  com.openclassrooms.safetyNet.controller.PersonController - Requête GET /person/fire?address=947 E. Rose Dr
+2025-05-12 14:41:05 [http-nio-8080-exec-2] INFO  com.openclassrooms.safetyNet.controller.PersonController - Réponse avec 3 résident(s) à l'adresse 947 E. Rose Dr
+2025-05-12 14:41:05 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-05-12 14:41:05 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Writing [FireResponseDTO(stationNumber=10, residents=[FireResidentDTO(firstName=Brian, lastName=Stelzer, phon (truncated)...]
+2025-05-12 14:41:05 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2025-05-12 14:42:20 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - Starting SafetyNetApplication using Java 17.0.12 with PID 22780 (C:\Users\cvign\eclipse-workspace\safetyNetAlerts\target\classes started by cvign in C:\Users\cvign\eclipse-workspace\safetyNetAlerts)
+2025-05-12 14:42:20 [main] DEBUG com.openclassrooms.safetyNet.SafetyNetApplication - Running with Spring Boot v3.1.6, Spring v6.0.14
+2025-05-12 14:42:20 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 14:42:21 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-05-12 14:42:21 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 14:42:21 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 14:42:21 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-05-12 14:42:21 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 14:42:21 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-05-12 14:42:21 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - 18 mappings in 'requestMappingHandlerMapping'
+2025-05-12 14:42:21 [main] DEBUG org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-05-12 14:42:21 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-05-12 14:42:21 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-12 14:42:21 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-12 14:42:21 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - Started SafetyNetApplication in 1.781 seconds (process running for 2.33)
+2025-05-12 14:42:21 [main] INFO  com.openclassrooms.safetyNet.bootstrap.DataLoader - Chargement des données depuis data.json...
+2025-05-12 14:42:21 [main] INFO  com.openclassrooms.safetyNet.bootstrap.DataLoader - Données JSON chargées en mémoire avec succès : 23 personnes, 13 casernes, 23 dossiers médicaux
+2025-05-12 14:42:28 [http-nio-8080-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-12 14:42:28 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-12 14:42:28 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2025-05-12 14:42:28 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2025-05-12 14:42:28 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2025-05-12 14:42:28 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7524b6c6
+2025-05-12 14:42:28 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@709d6347
+2025-05-12 14:42:28 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-05-12 14:42:28 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-12 14:42:28 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/fire?address=947%20E.%20Rose%20Dr", parameters={masked}
+2025-05-12 14:42:28 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.openclassrooms.safetyNet.controller.PersonController#getFireInfo(String)
+2025-05-12 14:42:28 [http-nio-8080-exec-2] INFO  com.openclassrooms.safetyNet.controller.PersonController - Requête GET /person/fire?address=947 E. Rose Dr
+2025-05-12 14:42:28 [http-nio-8080-exec-2] INFO  com.openclassrooms.safetyNet.controller.PersonController - Réponse avec 3 résident(s) à l'adresse 947 E. Rose Dr
+2025-05-12 14:42:28 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-05-12 14:42:28 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Writing [FireResponseDTO(stationNumber=10, residents=[FireResidentDTO(firstName=Brian, lastName=Stelzer, phon (truncated)...]
+2025-05-12 14:42:28 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2025-05-12 14:44:07 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - Starting SafetyNetApplication using Java 17.0.12 with PID 18584 (C:\Users\cvign\eclipse-workspace\safetyNetAlerts\target\classes started by cvign in C:\Users\cvign\eclipse-workspace\safetyNetAlerts)
+2025-05-12 14:44:07 [main] DEBUG com.openclassrooms.safetyNet.SafetyNetApplication - Running with Spring Boot v3.1.6, Spring v6.0.14
+2025-05-12 14:44:07 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 14:44:08 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-05-12 14:44:08 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 14:44:08 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 14:44:08 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-05-12 14:44:08 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 14:44:08 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-05-12 14:44:08 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - 18 mappings in 'requestMappingHandlerMapping'
+2025-05-12 14:44:08 [main] DEBUG org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-05-12 14:44:08 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-05-12 14:44:08 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-12 14:44:08 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-12 14:44:08 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - Started SafetyNetApplication in 1.905 seconds (process running for 2.494)
+2025-05-12 14:44:08 [main] INFO  com.openclassrooms.safetyNet.bootstrap.DataLoader - Chargement des données depuis data.json...
+2025-05-12 14:44:08 [main] INFO  com.openclassrooms.safetyNet.bootstrap.DataLoader - Données JSON chargées en mémoire avec succès : 23 personnes, 13 casernes, 23 dossiers médicaux
+2025-05-12 14:47:39 [http-nio-8080-exec-4] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-12 14:47:39 [http-nio-8080-exec-4] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-12 14:47:39 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2025-05-12 14:47:39 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2025-05-12 14:47:39 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2025-05-12 14:47:39 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@47eafc7
+2025-05-12 14:47:39 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@490ba0fc
+2025-05-12 14:47:39 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-05-12 14:47:39 [http-nio-8080-exec-4] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-05-12 14:47:39 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/firestation", parameters={}
+2025-05-12 14:47:39 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.openclassrooms.safetyNet.controller.FirestationController#addMapping(FirestationDTO)
+2025-05-12 14:47:39 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.openclassrooms.safetyNet.dto.FirestationDTO@2495d74a]
+2025-05-12 14:47:39 [http-nio-8080-exec-4] INFO  com.openclassrooms.safetyNet.controller.FirestationController - POST /firestation avec données: com.openclassrooms.safetyNet.dto.FirestationDTO@2495d74a
+2025-05-12 14:47:39 [http-nio-8080-exec-4] INFO  com.openclassrooms.safetyNet.service.JsonFileService - Données enregistrées avec succès dans src/main/resources/data.json
+2025-05-12 14:47:39 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Using 'application/octet-stream', given [*/*] and supported [*/*]
+2025-05-12 14:47:39 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2025-05-12 14:47:43 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - PUT "/firestation?address=947%20E.%20Rose%20Dr&newStation=10", parameters={masked}
+2025-05-12 14:47:43 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.openclassrooms.safetyNet.controller.FirestationController#updateMapping(String, String)
+2025-05-12 14:47:43 [http-nio-8080-exec-5] INFO  com.openclassrooms.safetyNet.controller.FirestationController - PUT /firestation pour address=947 E. Rose Dr et nouveau numéro=10
+2025-05-12 14:47:43 [http-nio-8080-exec-5] INFO  com.openclassrooms.safetyNet.service.JsonFileService - Données enregistrées avec succès dans src/main/resources/data.json
+2025-05-12 14:47:43 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Using 'application/octet-stream', given [*/*] and supported [*/*]
+2025-05-12 14:47:43 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2025-05-12 14:47:46 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - DELETE "/firestation?address=1509%20Street%20Food", parameters={masked}
+2025-05-12 14:47:46 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.openclassrooms.safetyNet.controller.FirestationController#deleteFirestationMappingByAddress(String)
+2025-05-12 14:47:46 [http-nio-8080-exec-6] INFO  com.openclassrooms.safetyNet.controller.FirestationController - DELETE /firestation pour address=1509 Street Food
+2025-05-12 14:47:46 [http-nio-8080-exec-6] INFO  com.openclassrooms.safetyNet.service.JsonFileService - Données enregistrées avec succès dans src/main/resources/data.json
+2025-05-12 14:47:46 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Using 'application/octet-stream', given [*/*] and supported [*/*]
+2025-05-12 14:47:46 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2025-05-12 14:47:52 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/medicalRecord?firstName=Tenley&lastName=Boyd", parameters={masked}
+2025-05-12 14:47:52 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.openclassrooms.safetyNet.controller.MedicalRecordController#addMedicalRecord(String, String, MedicalRecordDTO)
+2025-05-12 14:47:52 [http-nio-8080-exec-7] WARN  org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<?> com.openclassrooms.safetyNet.controller.MedicalRecordController.addMedicalRecord(java.lang.String,java.lang.String,com.openclassrooms.safetyNet.dto.MedicalRecordDTO)]
+2025-05-12 14:47:52 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2025-05-12 14:47:52 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - "ERROR" dispatch for POST "/error?firstName=Tenley&lastName=Boyd", parameters={masked}
+2025-05-12 14:47:52 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-05-12 14:47:52 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-05-12 14:47:52 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Writing [{timestamp=Mon May 12 14:47:52 CEST 2025, status=400, error=Bad Request, path=/medicalRecord}]
+2025-05-12 14:47:52 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 400
+2025-05-12 15:02:44 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/person", parameters={}
+2025-05-12 15:02:44 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.openclassrooms.safetyNet.controller.PersonController#addPerson(PersonDTO)
+2025-05-12 15:02:44 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.openclassrooms.safetyNet.dto.PersonDTO@5a06f909]
+2025-05-12 15:02:44 [http-nio-8080-exec-9] INFO  com.openclassrooms.safetyNet.controller.PersonController - Requête POST /person avec données : com.openclassrooms.safetyNet.dto.PersonDTO@5a06f909
+2025-05-12 15:02:44 [http-nio-8080-exec-9] INFO  com.openclassrooms.safetyNet.service.JsonFileService - Données enregistrées avec succès dans src/main/resources/data.json
+2025-05-12 15:02:44 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-05-12 15:02:44 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Writing [com.openclassrooms.safetyNet.dto.PersonDTO@5a06f909]
+2025-05-12 15:02:44 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2025-05-12 15:03:35 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - PUT "/person?firstName=virginie&lastName=delort", parameters={masked}
+2025-05-12 15:03:35 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.openclassrooms.safetyNet.controller.PersonController#updatePerson(String, String, PersonDTO)
+2025-05-12 15:03:35 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.openclassrooms.safetyNet.dto.PersonDTO@37c86124]
+2025-05-12 15:03:35 [http-nio-8080-exec-10] INFO  com.openclassrooms.safetyNet.controller.PersonController - Requête PUT /person pour virginie delort
+2025-05-12 15:03:35 [http-nio-8080-exec-10] INFO  com.openclassrooms.safetyNet.service.JsonFileService - Données enregistrées avec succès dans src/main/resources/data.json
+2025-05-12 15:03:35 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-05-12 15:03:35 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Writing [com.openclassrooms.safetyNet.dto.PersonDTO@37c86124]
+2025-05-12 15:03:35 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2025-05-12 17:09:15 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/person", parameters={}
+2025-05-12 17:09:15 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.openclassrooms.safetyNet.controller.PersonController#addPerson(PersonDTO)
+2025-05-12 17:09:15 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.openclassrooms.safetyNet.dto.PersonDTO@67136ecb]
+2025-05-12 17:09:15 [http-nio-8080-exec-3] INFO  com.openclassrooms.safetyNet.controller.PersonController - Requête POST /person avec données : com.openclassrooms.safetyNet.dto.PersonDTO@67136ecb
+2025-05-12 17:09:15 [http-nio-8080-exec-3] INFO  com.openclassrooms.safetyNet.service.JsonFileService - Données enregistrées avec succès dans src/main/resources/data.json
+2025-05-12 17:09:15 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-05-12 17:09:15 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Writing [com.openclassrooms.safetyNet.dto.PersonDTO@67136ecb]
+2025-05-12 17:09:15 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2025-05-12 17:09:18 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - PUT "/person?firstName=virginie&lastName=delort", parameters={masked}
+2025-05-12 17:09:18 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.openclassrooms.safetyNet.controller.PersonController#updatePerson(String, String, PersonDTO)
+2025-05-12 17:09:18 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.openclassrooms.safetyNet.dto.PersonDTO@44bd717d]
+2025-05-12 17:09:18 [http-nio-8080-exec-4] INFO  com.openclassrooms.safetyNet.controller.PersonController - Requête PUT /person pour virginie delort
+2025-05-12 17:09:18 [http-nio-8080-exec-4] INFO  com.openclassrooms.safetyNet.service.JsonFileService - Données enregistrées avec succès dans src/main/resources/data.json
+2025-05-12 17:09:18 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-05-12 17:09:18 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Writing [com.openclassrooms.safetyNet.dto.PersonDTO@44bd717d]
+2025-05-12 17:09:18 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2025-05-12 17:09:27 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - DELETE "/person?firstName=virginie&lastName=delort", parameters={masked}
+2025-05-12 17:09:27 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.openclassrooms.safetyNet.controller.PersonController#deletePerson(String, String)
+2025-05-12 17:09:27 [http-nio-8080-exec-5] INFO  com.openclassrooms.safetyNet.controller.PersonController - Requête DELETE /person pour virginie delort
+2025-05-12 17:09:27 [http-nio-8080-exec-5] INFO  com.openclassrooms.safetyNet.service.JsonFileService - Données enregistrées avec succès dans src/main/resources/data.json
+2025-05-12 17:09:27 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Using 'application/octet-stream', given [*/*] and supported [*/*]
+2025-05-12 17:09:27 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2025-05-12 17:09:31 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/firestation", parameters={}
+2025-05-12 17:09:31 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.openclassrooms.safetyNet.controller.FirestationController#addMapping(FirestationDTO)
+2025-05-12 17:09:31 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.openclassrooms.safetyNet.dto.FirestationDTO@2d69b241]
+2025-05-12 17:09:31 [http-nio-8080-exec-6] INFO  com.openclassrooms.safetyNet.controller.FirestationController - POST /firestation avec données: com.openclassrooms.safetyNet.dto.FirestationDTO@2d69b241
+2025-05-12 17:09:31 [http-nio-8080-exec-6] INFO  com.openclassrooms.safetyNet.service.JsonFileService - Données enregistrées avec succès dans src/main/resources/data.json
+2025-05-12 17:09:31 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Using 'application/octet-stream', given [*/*] and supported [*/*]
+2025-05-12 17:09:31 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2025-05-12 17:09:34 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - PUT "/firestation?address=947%20E.%20Rose%20Dr&newStation=10", parameters={masked}
+2025-05-12 17:09:34 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.openclassrooms.safetyNet.controller.FirestationController#updateMapping(String, String)
+2025-05-12 17:09:34 [http-nio-8080-exec-7] INFO  com.openclassrooms.safetyNet.controller.FirestationController - PUT /firestation pour address=947 E. Rose Dr et nouveau numéro=10
+2025-05-12 17:09:34 [http-nio-8080-exec-7] INFO  com.openclassrooms.safetyNet.service.JsonFileService - Données enregistrées avec succès dans src/main/resources/data.json
+2025-05-12 17:09:34 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Using 'application/octet-stream', given [*/*] and supported [*/*]
+2025-05-12 17:09:34 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2025-05-12 17:09:59 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/medicalRecord?firstName=Tenley&lastName=Boyd", parameters={masked}
+2025-05-12 17:09:59 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.openclassrooms.safetyNet.controller.MedicalRecordController#addMedicalRecord(String, String, MedicalRecordDTO)
+2025-05-12 17:09:59 [http-nio-8080-exec-8] WARN  org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<?> com.openclassrooms.safetyNet.controller.MedicalRecordController.addMedicalRecord(java.lang.String,java.lang.String,com.openclassrooms.safetyNet.dto.MedicalRecordDTO)]
+2025-05-12 17:09:59 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2025-05-12 17:09:59 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - "ERROR" dispatch for POST "/error?firstName=Tenley&lastName=Boyd", parameters={masked}
+2025-05-12 17:09:59 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-05-12 17:09:59 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-05-12 17:09:59 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Writing [{timestamp=Mon May 12 17:09:59 CEST 2025, status=400, error=Bad Request, path=/medicalRecord}]
+2025-05-12 17:09:59 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 400
+2025-05-12 17:10:13 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - Starting SafetyNetApplication using Java 17.0.12 with PID 5932 (C:\Users\cvign\eclipse-workspace\safetyNetAlerts\target\classes started by cvign in C:\Users\cvign\eclipse-workspace\safetyNetAlerts)
+2025-05-12 17:10:13 [main] DEBUG com.openclassrooms.safetyNet.SafetyNetApplication - Running with Spring Boot v3.1.6, Spring v6.0.14
+2025-05-12 17:10:13 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-12 17:10:14 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-05-12 17:10:14 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-12 17:10:14 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-12 17:10:14 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-05-12 17:10:14 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-12 17:10:15 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-12 17:10:15 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-05-12 17:10:15 [main] INFO  com.openclassrooms.safetyNet.SafetyNetApplication - Started SafetyNetApplication in 1.645 seconds (process running for 2.125)
+2025-05-12 17:10:15 [main] INFO  com.openclassrooms.safetyNet.bootstrap.DataLoader - Chargement des données depuis data.json...
+2025-05-12 17:10:15 [main] INFO  com.openclassrooms.safetyNet.bootstrap.DataLoader - Données JSON chargées en mémoire avec succès : 23 personnes, 14 casernes, 23 dossiers médicaux
+2025-05-12 17:10:19 [http-nio-8080-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-12 17:10:19 [http-nio-8080-exec-2] INFO  com.openclassrooms.safetyNet.controller.FirestationController - PUT /firestation pour address=947 E. Rose Dr et nouveau numéro=10
+2025-05-12 17:10:19 [http-nio-8080-exec-2] INFO  com.openclassrooms.safetyNet.service.JsonFileService - Données enregistrées avec succès dans src/main/resources/data.json
+2025-05-12 17:10:23 [http-nio-8080-exec-1] INFO  com.openclassrooms.safetyNet.controller.FirestationController - POST /firestation avec données: com.openclassrooms.safetyNet.dto.FirestationDTO@61f203d2
+2025-05-12 17:10:23 [http-nio-8080-exec-1] INFO  com.openclassrooms.safetyNet.service.JsonFileService - Données enregistrées avec succès dans src/main/resources/data.json
+2025-05-12 17:10:26 [http-nio-8080-exec-3] INFO  com.openclassrooms.safetyNet.controller.FirestationController - PUT /firestation pour address=947 E. Rose Dr et nouveau numéro=10
+2025-05-12 17:10:26 [http-nio-8080-exec-3] INFO  com.openclassrooms.safetyNet.service.JsonFileService - Données enregistrées avec succès dans src/main/resources/data.json
+2025-05-12 17:10:29 [http-nio-8080-exec-5] INFO  com.openclassrooms.safetyNet.controller.FirestationController - DELETE /firestation pour address=1509 Street Food
+2025-05-12 17:10:29 [http-nio-8080-exec-5] INFO  com.openclassrooms.safetyNet.service.JsonFileService - Données enregistrées avec succès dans src/main/resources/data.json
+2025-05-12 17:15:24 [http-nio-8080-exec-8] INFO  com.openclassrooms.safetyNet.controller.MedicalRecordController - POST /medicalRecord pour Roger Boyd
+2025-05-12 17:16:22 [http-nio-8080-exec-9] INFO  com.openclassrooms.safetyNet.controller.PersonController - Requête POST /person avec données : com.openclassrooms.safetyNet.dto.PersonDTO@58d05192
+2025-05-12 17:16:22 [http-nio-8080-exec-9] INFO  com.openclassrooms.safetyNet.service.JsonFileService - Données enregistrées avec succès dans src/main/resources/data.json
+2025-05-12 17:18:01 [http-nio-8080-exec-2] INFO  com.openclassrooms.safetyNet.controller.MedicalRecordController - POST /medicalRecord pour Roger Boyd
+2025-05-12 17:18:27 [http-nio-8080-exec-1] INFO  com.openclassrooms.safetyNet.controller.MedicalRecordController - POST /medicalRecord pour virginie delort
+2025-05-12 17:18:27 [http-nio-8080-exec-1] INFO  com.openclassrooms.safetyNet.service.JsonFileService - Données enregistrées avec succès dans src/main/resources/data.json
+2025-05-12 17:18:47 [http-nio-8080-exec-3] INFO  com.openclassrooms.safetyNet.controller.MedicalRecordController - PUT /medicalRecord pour virginie delort
+2025-05-12 17:18:47 [http-nio-8080-exec-3] INFO  com.openclassrooms.safetyNet.service.JsonFileService - Données enregistrées avec succès dans src/main/resources/data.json
+2025-05-12 17:18:57 [http-nio-8080-exec-5] INFO  com.openclassrooms.safetyNet.controller.MedicalRecordController - DELETE /medicalRecord pour Tenley Boyd
+2025-05-12 17:18:57 [http-nio-8080-exec-5] INFO  com.openclassrooms.safetyNet.service.JsonFileService - Données enregistrées avec succès dans src/main/resources/data.json
+2025-05-12 17:19:25 [main] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - R�cup�ration des r�sidents avec infos m�dicales pour l'adresse : 18 rue des Pivoines
+2025-05-12 17:19:25 [main] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Recherche des enfants � l'adresse : 18 rue des Pivoines
+2025-05-12 17:19:25 [main] DEBUG com.openclassrooms.safetyNet.service.PersonInfoService - 3 r�sident(s) trouv�(s) � cette adresse
+2025-05-12 17:19:25 [main] INFO  com.openclassrooms.safetyNet.service.PersonInfoService - Nombre d'enfants trouv�s � l'adresse 18 rue des Pivoines : 1

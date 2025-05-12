@@ -4,8 +4,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.openclassrooms.safetyNet.dataStore.JsonDataStore;
 import com.openclassrooms.safetyNet.model.DataWrapper;
 
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
@@ -16,16 +16,23 @@ import java.nio.file.Paths;
  * Service chargé de sauvegarder les données en mémoire vers data.json.
  */
 @Service
-@RequiredArgsConstructor
-@Slf4j
 public class JsonFileService {
 
+	private static final Logger log = LoggerFactory.getLogger(JsonFileService.class);
+	
     private final JsonDataStore dataStore;
     private final ObjectMapper objectMapper = new ObjectMapper();
 
     private static final String DATA_FILE_PATH = "src/main/resources/data.json";
 
-    public void saveDataToFile() {
+    
+    public JsonFileService(JsonDataStore dataStore) {
+		super();
+		this.dataStore = dataStore;
+	}
+
+
+	public void saveDataToFile() {
         try {
             DataWrapper wrapper = new DataWrapper();
             wrapper.setPersons(dataStore.getPersons());

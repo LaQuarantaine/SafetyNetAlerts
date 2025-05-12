@@ -1,5 +1,7 @@
 package com.openclassrooms.safetyNet.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -13,17 +15,21 @@ import org.springframework.web.bind.annotation.RestController;
 import com.openclassrooms.safetyNet.dto.MedicalRecordDTO;
 import com.openclassrooms.safetyNet.service.MedicalRecordService;
 
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @RequestMapping
-@RequiredArgsConstructor
-@Slf4j
 public class MedicalRecordController {
+
+	private static final Logger log = LoggerFactory.getLogger(MedicalRecordController.class);
 
 	private final MedicalRecordService medicalRecordService;
 	
+	
+	public MedicalRecordController(MedicalRecordService medicalRecordService) {
+		super();
+		this.medicalRecordService = medicalRecordService;
+	}
+
 	@PostMapping("/medicalRecord")
 	public ResponseEntity<?> addMedicalRecord(@RequestParam String firstName,
 	                                          @RequestParam String lastName,

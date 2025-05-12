@@ -12,20 +12,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.io.InputStream;
-/**
- * Classe DataLoader
- * 
- * est automatiquement exécutée au démarrage de l'application,
- * grâce à l'implémentation de l'interface CommandLineRunner.
- *
- * Son rôle est de :
- * - Charger le fichier data.json situé dans le dossier resources
- * - Désérialiser le contenu JSON en objets Java via Jackson
- * - Insérer les données dans la base MySQL via les repositories Spring Data JPA
- *
- * Elle permet ainsi d'initialiser la base de données à chaque lancement,
- * ce qui est pratique en phase de développement ou de démonstration.
- */
+
 
 @Component // Rend la classe détectable automatiquement par Spring
 @RequiredArgsConstructor
@@ -36,7 +23,7 @@ public class DataLoader implements CommandLineRunner {
 	
 
 	    //interface fonctionnelle (contient 1 seule méthode "run") SpringBoot 
-	    // permet d'exécuter du code automatiquement au lancement de l'appli
+	    // s'exécuter automatiquement au lancement de l'appli
 	    
 	    @Override
 	    public void run(String... args) throws Exception {
@@ -54,7 +41,7 @@ public class DataLoader implements CommandLineRunner {
 	        }
 	        
 	        /*
-	         * Lecture du fichier data.json avec Jacksonet conversion en un objet DataWrapper,
+	         * Lecture du fichier data.json avec Jackson. Conversion en un objet DataWrapper,
 	         * Ce wrapper contient 3 listes : List<Person> persons, List<Firestation> firestations
 	         * et List<MedicalRecord> medicalrecords
 	         */

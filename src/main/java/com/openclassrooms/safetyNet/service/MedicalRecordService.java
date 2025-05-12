@@ -4,19 +4,22 @@ import com.openclassrooms.safetyNet.dataStore.JsonDataStore;
 import com.openclassrooms.safetyNet.dto.MedicalRecordDTO;
 import com.openclassrooms.safetyNet.model.MedicalRecord;
 
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
-@RequiredArgsConstructor
 public class MedicalRecordService {
 
     private final JsonDataStore dataStore;
     private final JsonFileService jsonFileService;
 
+    public MedicalRecordService(JsonDataStore dataStore, JsonFileService jsonFileService) {
+        this.dataStore = dataStore;
+        this.jsonFileService = jsonFileService;
+    }
+    
     /**
      * Récupère un dossier médical à partir du prénom et nom.
      */

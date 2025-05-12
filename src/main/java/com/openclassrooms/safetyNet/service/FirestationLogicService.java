@@ -186,5 +186,5 @@ public class FirestationLogicService {
         firestation.setStation(firestationDTO.getStation());
         firestationService.save(firestation);
     }
- 	
+ 
 }

@@ -15,7 +15,6 @@ public class FirestationResponseDTO {
 	private List<PersonCoveredDTO> persons;
 	private int adultCount;
 	private int childCount;
-	
 
 }
 

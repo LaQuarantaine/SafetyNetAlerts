@@ -2,8 +2,6 @@ package com.openclassrooms.safetyNet.service;
 
 import com.openclassrooms.safetyNet.model.Person;
 
-import lombok.RequiredArgsConstructor;
-
 import com.openclassrooms.safetyNet.dataStore.JsonDataStore;
 import com.openclassrooms.safetyNet.dto.PersonDTO;
 
@@ -13,13 +11,19 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-@RequiredArgsConstructor
 public class PersonService {
 
     private final JsonDataStore dataStore;
     private final JsonFileService jsonFileService;
 
-    public PersonDTO addPerson(PersonDTO personDTO) {
+    
+    public PersonService(JsonDataStore dataStore, JsonFileService jsonFileService) {
+		super();
+		this.dataStore = dataStore;
+		this.jsonFileService = jsonFileService;
+	}
+
+	public PersonDTO addPerson(PersonDTO personDTO) {
         Person person = addPersonDTO(personDTO);
         dataStore.getPersons().add(person);
         jsonFileService.saveDataToFile();

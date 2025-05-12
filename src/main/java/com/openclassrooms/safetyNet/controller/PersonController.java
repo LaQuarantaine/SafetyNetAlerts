@@ -15,25 +15,33 @@ import org.springframework.web.bind.annotation.RestController;
 import com.openclassrooms.safetyNet.dto.ChildAlertDTO;
 import com.openclassrooms.safetyNet.dto.CommunityEmailDTO;
 import com.openclassrooms.safetyNet.dto.FireResponseDTO;
+import com.openclassrooms.safetyNet.dto.PersonDTO;
 import com.openclassrooms.safetyNet.dto.PersonInfoDTO;
 import com.openclassrooms.safetyNet.service.FirestationLogicService;
 import com.openclassrooms.safetyNet.service.PersonInfoService;
 import com.openclassrooms.safetyNet.service.PersonService;
-import com.openclassrooms.safetyNet.dto.PersonDTO;
 
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+
 
 @RestController
 @RequestMapping
-@RequiredArgsConstructor
-@Slf4j
 public class PersonController {
 
+	private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(PersonController.class);
+	
 	private final PersonInfoService personInfoService;
 	private final PersonService personService;
 	private final FirestationLogicService firestationLogicService; 
 	
+
+	public PersonController(PersonInfoService personInfoService, PersonService personService,
+			FirestationLogicService firestationLogicService) {
+		super();
+		this.personInfoService = personInfoService;
+		this.personService = personService;
+		this.firestationLogicService = firestationLogicService;
+	}
+
 	
 	@GetMapping("/childAlert")	// endpoint 2
 	public ResponseEntity<?> getChildAlert(@RequestParam String address) {

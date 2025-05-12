@@ -9,15 +9,18 @@ import com.openclassrooms.safetyNet.model.Person;
 import com.openclassrooms.safetyNet.model.MedicalRecord;
 import com.openclassrooms.safetyNet.util.AgeUtil;
 
-import lombok.RequiredArgsConstructor;
 
 @Service
-@RequiredArgsConstructor
 public class PersonAgeService {
 	
 	private final JsonDataStore dataStore;
+	
+	public PersonAgeService(JsonDataStore dataStore) {
+		super();
+		this.dataStore = dataStore;
+	}
 
-    /**
+	/**
      * Récupère l'âge d'une personne en consultant son dossier médical.
      * Retourne null si aucun dossier médical n'est trouvé.
      */

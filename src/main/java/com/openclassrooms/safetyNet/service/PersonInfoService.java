@@ -7,6 +7,8 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import com.openclassrooms.safetyNet.model.Person;
@@ -17,20 +19,30 @@ import com.openclassrooms.safetyNet.dto.FireResidentDTO;
 import com.openclassrooms.safetyNet.dto.FireResponseDTO;
 import com.openclassrooms.safetyNet.dto.HouseholdMemberDTO;
 import com.openclassrooms.safetyNet.dto.PersonInfoDTO;
+import com.openclassrooms.safetyNet.model.Firestation;
 import com.openclassrooms.safetyNet.model.MedicalRecord;
 
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 
 @Service
-@RequiredArgsConstructor
-@Slf4j
 public class PersonInfoService {
+	
+	private static final Logger log = LoggerFactory.getLogger(PersonInfoService.class);
 	
 	private final PersonAgeService personAgeService;
 	private final PersonAccessService personAccessService;
 	private final MedicalRecordService medicalRecordService;
 	private final JsonDataStore dataStore;
+
+	
+	
+	public PersonInfoService(PersonAgeService personAgeService, PersonAccessService personAccessService,
+			MedicalRecordService medicalRecordService, JsonDataStore dataStore) {
+		super();
+		this.personAgeService = personAgeService;
+		this.personAccessService = personAccessService;
+		this.medicalRecordService = medicalRecordService;
+		this.dataStore = dataStore;
+	}
 
 	// service pour traiter le endpoint 1
 	public List<ChildAlertDTO> getChildrenByAddress(String address) {
@@ -72,12 +84,6 @@ public class PersonInfoService {
 	public FireResponseDTO getResidentsByAddressWithMedicalInfo(String address) {
 	    log.info("Récupération des résidents avec infos médicales pour l'adresse : {}", address);
 
-	    String stationNumber = dataStore.getFirestations().stream()
-	        .filter(f -> f.getAddress().equals(address))
-	        .map(f -> f.getStation())
-	        .findFirst()
-	        .orElse("N/A");
-
 	    List<Person> residents = personAccessService.getResidentsAtAddress(address);
 
 	    List<FireResidentDTO> residentDTOs = residents.stream()
@@ -94,10 +100,18 @@ public class PersonInfoService {
 	            );
 	        })
 	        .collect(Collectors.toList());
+	    
+	    String stationNumber = "N/A";
+	    for (Firestation firestation : dataStore.getFirestations()) {
+	        if (firestation.getAddress().equals(address)) {
+	            stationNumber = firestation.getStation();
+	            break;
+	        }
+	    }
 
 	    return new FireResponseDTO(stationNumber, residentDTOs);
 	}
-	
+
 	public List<PersonInfoDTO> getPersonsByLastName(String lastName) {
 	    List<Person> persons = dataStore.getPersons().stream()
 	        .filter(p -> p.getLastName().equals(lastName))

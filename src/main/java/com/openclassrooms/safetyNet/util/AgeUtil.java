@@ -12,7 +12,7 @@ public class AgeUtil {
     /**
      * Calcule l'âge à partir d'une date de naissance au format MM/dd/yyyy.
      */
-    public static int calculateAge(String birthdate) {
+    public static Integer calculateAge(String birthdate) {
         LocalDate birth = LocalDate.parse(birthdate, FORMATTER);
         return Period.between(birth, LocalDate.now()).getYears();
     }
