@@ -15,8 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.openclassrooms.safetyNet.dto.ChildAlertDTO;
 import com.openclassrooms.safetyNet.dto.CommunityEmailDTO;
 import com.openclassrooms.safetyNet.dto.FireResponseDTO;
-import com.openclassrooms.safetyNet.dto.PersonDTO;
+import com.openclassrooms.safetyNet.dto.PersonCreateDTO;
 import com.openclassrooms.safetyNet.dto.PersonInfoDTO;
+import com.openclassrooms.safetyNet.dto.PersonUpdateDTO;
 import com.openclassrooms.safetyNet.service.FirestationLogicService;
 import com.openclassrooms.safetyNet.service.PersonInfoService;
 import com.openclassrooms.safetyNet.service.PersonService;
@@ -46,14 +47,13 @@ public class PersonController {
 	@GetMapping("/childAlert")	// endpoint 2
 	public ResponseEntity<?> getChildAlert(@RequestParam String address) {
 		log.info("Entrée requête GET /childAlert?address={}", address);
+		
 	    List<ChildAlertDTO> result = personInfoService.getChildrenByAddress(address);
-	    if (result.isEmpty()) {	// Gère le cas où aucun enfant n’est trouvé
-	    	log.info("Aucun enfant trouvé pour l'adresse : {}", address);
-	        return ResponseEntity.ok("No children found at this address."); // renvoi une chaine vide " "
-	    }
-	    log.info("{} enfant(s) trouvé(s) à l'adresse : {}", result.size(), address);
-	    return ResponseEntity.ok(result); // si ok renvoi la liste en JSON
+	    
+	    log.info("{} enfant(s) trouvé(s) pour l'adresse : {}", result.size(), address);
+	    return ResponseEntity.ok(result); 
 	}
+
 	
 	@GetMapping("/fire")	// endpoint 4
     public ResponseEntity<FireResponseDTO> getFireInfo(@RequestParam String address) {
@@ -66,24 +66,31 @@ public class PersonController {
 	@GetMapping("/personInfo")	// endpoint 6
 	public ResponseEntity<List<PersonInfoDTO>> getPersonInfo(@RequestParam String lastName) {
 	    log.info("Requête GET /personInfo?lastName={}", lastName);
+	    
 	    List<PersonInfoDTO> persons = personInfoService.getPersonsByLastName(lastName);
+	    
 	    log.info("Réponse avec {} personne(s) trouvée(s)", persons.size());
 	    return ResponseEntity.ok(persons);
 	}
 	
 	@GetMapping("/communityEmail")	// endpoint 7
-	public ResponseEntity<List<CommunityEmailDTO>> getCommunityEmail(@RequestParam String city) {
+	public ResponseEntity<List<String>> getCommunityEmail(@RequestParam String city) {
 		log.info("Requete GET /communityEmail?city={}", city);
-		List<CommunityEmailDTO> emails = personInfoService.getEmailByCity(city);
+		
+		List<String> emails = personInfoService.getEmailByCity(city).stream()
+				.map(CommunityEmailDTO::getEmail)
+				.toList();
+		
 		log.info("Réponse avec {} email(s) trouvé(s)", emails.size());
 		return ResponseEntity.ok(emails);
 	}
 	
 	
 	@PostMapping("/person")    // POST : Ajouter une personne
-	public ResponseEntity<PersonDTO> addPerson(@RequestBody PersonDTO personDTO) {
+	public ResponseEntity<PersonCreateDTO> addPerson(@RequestBody PersonCreateDTO personDTO) {
 	    log.info("Requête POST /person avec données : {}", personDTO);
-	    PersonDTO createdPerson = personService.addPerson(personDTO);
+	    
+	    PersonCreateDTO createdPerson = personService.addPerson(personDTO);
 	    return ResponseEntity.ok(createdPerson);
 	}
 
@@ -91,9 +98,9 @@ public class PersonController {
 	@PutMapping("/person")     // PUT : Mettre à jour une personne
 	public ResponseEntity<?> updatePerson(@RequestParam String firstName,
 	                                      @RequestParam String lastName,
-	                                      @RequestBody PersonDTO personDTO) {
+	                                      @RequestBody PersonUpdateDTO personUpdateDTO) {
 	    log.info("Requête PUT /person pour {} {}", firstName, lastName);
-	    return personService.updatePerson(firstName, lastName, personDTO)
+	    return personService.updatePerson(firstName, lastName, personUpdateDTO)
 	            .map(updated -> ResponseEntity.ok(updated))
 	            .orElseGet(() -> ResponseEntity.notFound().build());
 	}
@@ -103,6 +110,7 @@ public class PersonController {
 	public ResponseEntity<?> deletePerson(@RequestParam String firstName,
 	                                      @RequestParam String lastName) {
 	    log.info("Requête DELETE /person pour {} {}", firstName, lastName);
+	    
 	    boolean deleted = personService.deletePerson(firstName, lastName);
 	    if (deleted) {
 	        return ResponseEntity.ok().build();

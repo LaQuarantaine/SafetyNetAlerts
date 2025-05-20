@@ -1,7 +1,7 @@
 package com.openclassrooms.safetyNet.service;
 
 import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
@@ -44,7 +44,7 @@ public class PersonInfoService {
 		this.dataStore = dataStore;
 	}
 
-	// service pour traiter le endpoint 1
+	// service pour traiter le endpoint 2
 	public List<ChildAlertDTO> getChildrenByAddress(String address) {
 		log.info("Recherche des enfants à l'adresse : {}", address);
 		
@@ -62,12 +62,16 @@ public class PersonInfoService {
 	        
 	        if (personAgeService.isChild(person)) {
 	            // construire la liste des autres membres du foyer
-	            List<HouseholdMemberDTO> others = residents.stream()
-	                .filter(p -> !p.getFirstName().equals(person.getFirstName()) ||
-	                             !p.getLastName().equals(person.getLastName()))
-	                .map(p -> new HouseholdMemberDTO(p.getFirstName(), p.getLastName()))
-	                .collect(Collectors.toList());
-
+	        	List<HouseholdMemberDTO> others = residents.stream()
+	        		    .filter(p -> !(p.getFirstName().equals(person.getFirstName()) &&
+	        		                   p.getLastName().equals(person.getLastName())))
+	        		    .filter(p -> {
+	        		        Integer memberAge = personAgeService.getAgeForPerson(p);
+	        		        return memberAge == null || memberAge >= 18;
+	        		    })
+	        		    .map(p -> new HouseholdMemberDTO(p.getFirstName(), p.getLastName()))
+	        		    .collect(Collectors.toList());
+	        	
 	            children.add(new ChildAlertDTO(
 	                person.getFirstName(),
 	                person.getLastName(),
@@ -118,11 +122,11 @@ public class PersonInfoService {
 	        .collect(Collectors.toList());
 
 	    return persons.stream()
+	    	.filter(p -> personAgeService.getAgeForPerson(p) != null)
 	        .map(person -> {
+	        	Integer age = personAgeService.getAgeForPerson(person);
 	            Optional<MedicalRecord> medicalRecord = medicalRecordService
 	                .getByName(person.getFirstName(), person.getLastName());
-
-	            int age = personAgeService.getAgeForPerson(person);
 
 	            List<String> medications = medicalRecord.map(MedicalRecord::getMedications).orElse(List.of());
 	            List<String> allergies = medicalRecord.map(MedicalRecord::getAllergies).orElse(List.of());
@@ -146,7 +150,7 @@ public class PersonInfoService {
 		List<Person> residents = personAccessService.getResidentsAtCity(city) ;
 		log.debug("{} résident(s) trouvé(s) dans cette ville", residents.size());
 		
-		Set<CommunityEmailDTO> emailSet = new HashSet<>();
+		Set<CommunityEmailDTO> emailSet = new LinkedHashSet<>();
 	    for (Person person : residents) {
 	        emailSet.add(new CommunityEmailDTO(person.getEmail()));
 	    }

@@ -10,25 +10,38 @@ import com.openclassrooms.safetyNet.model.Firestation;
 import com.openclassrooms.safetyNet.model.MedicalRecord;
 import com.openclassrooms.safetyNet.model.Person;
 
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import org.springframework.stereotype.Service;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
-@RequiredArgsConstructor
-@Slf4j
 public class FirestationLogicService {
 
+	private static final Logger log = LoggerFactory.getLogger(FirestationLogicService.class);
+	
     private final FirestationService firestationService;
     private final PersonAgeService personAgeService;
     private final PersonAccessService personAccessService;
     private final MedicalRecordService medicalRecordService;
     private final JsonDataStore dataStore;
 
-    	// utilisée par endpoint 1
+    
+    	public FirestationLogicService(FirestationService firestationService, PersonAgeService personAgeService,
+			PersonAccessService personAccessService, MedicalRecordService medicalRecordService,
+			JsonDataStore dataStore) {
+		super();
+		this.firestationService = firestationService;
+		this.personAgeService = personAgeService;
+		this.personAccessService = personAccessService;
+		this.medicalRecordService = medicalRecordService;
+		this.dataStore = dataStore;
+	}
+
+		// utilisée par endpoint 1
     public FirestationResponseDTO getPersonsByStation(String stationNumber) {
         log.info("Recherche des personnes couvertes par la caserne n°{}", stationNumber);
 
@@ -113,7 +126,7 @@ public class FirestationLogicService {
 
         return new FireResponseDTO(stationNumber, residents);
     } 
-    
+   
     public Map<String, List<FireResidentDTO>> getFloodInfoByStations(List<String> stationNumbers) {
         Map<String, List<FireResidentDTO>> result = new HashMap<>();
 

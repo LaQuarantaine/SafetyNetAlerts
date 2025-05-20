@@ -2,7 +2,6 @@ package com.openclassrooms.safetyNet.service;
 
 import com.openclassrooms.safetyNet.dataStore.JsonDataStore;
 import com.openclassrooms.safetyNet.model.Firestation;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -12,14 +11,21 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
-@RequiredArgsConstructor
 public class FirestationService {
 
     private final JsonDataStore dataStore;
     private final JsonFileService jsonFileService;
 
+    
 
-    // endpoint 9 Ajout d'un mapping caserne/adresse
+    public FirestationService(JsonDataStore dataStore, JsonFileService jsonFileService) {
+		super();
+		this.dataStore = dataStore;
+		this.jsonFileService = jsonFileService;
+	}
+
+
+	// endpoint 9 Ajout d'un mapping caserne/adresse
     public Firestation save(Firestation firestation) {
     	dataStore.getFirestations().add(firestation);
         jsonFileService.saveDataToFile();

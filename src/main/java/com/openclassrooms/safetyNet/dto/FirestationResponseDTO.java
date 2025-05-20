@@ -2,19 +2,38 @@ package com.openclassrooms.safetyNet.dto;
 
 import java.util.List;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
-// DTO global de réponse
-
-@Data	//Lombok
-@NoArgsConstructor	//génère un constructeur vide
-@AllArgsConstructor	//génère une constructeur avec tous les champs en paramètres
 public class FirestationResponseDTO {
 	private List<PersonCoveredDTO> persons;
 	private int adultCount;
 	private int childCount;
+	
+	
+	public FirestationResponseDTO(List<PersonCoveredDTO> persons, int adultCount, int childCount) {
+		super();
+		this.persons = persons;
+		this.adultCount = adultCount;
+		this.childCount = childCount;
+	}
+	
+	public List<PersonCoveredDTO> getPersons() {
+		return persons;
+	}
+	public void setPersons(List<PersonCoveredDTO> persons) {
+		this.persons = persons;
+	}
+	public int getAdultCount() {
+		return adultCount;
+	}
+	public void setAdultCount(int adultCount) {
+		this.adultCount = adultCount;
+	}
+	public int getChildCount() {
+		return childCount;
+	}
+	public void setChildCount(int childCount) {
+		this.childCount = childCount;
+	}
 
 }
 

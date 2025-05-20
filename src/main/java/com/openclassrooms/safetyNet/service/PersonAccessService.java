@@ -9,15 +9,18 @@ import org.springframework.stereotype.Service;
 
 import com.openclassrooms.safetyNet.dataStore.JsonDataStore;
 import com.openclassrooms.safetyNet.model.Person;
-import lombok.RequiredArgsConstructor;
 
 @Service
-@RequiredArgsConstructor
 public class PersonAccessService {
 	
 	private final JsonDataStore dataStore;
+	
+    public PersonAccessService(JsonDataStore dataStore) {
+		super();
+		this.dataStore = dataStore;
+	}
 
-    public List<Person> getResidentsAtAddress(String address) {
+	public List<Person> getResidentsAtAddress(String address) {
         if (address == null) return Collections.emptyList();
         return dataStore.getPersons().stream()
                 .filter(p -> address.equals(p.getAddress()))
@@ -37,5 +40,7 @@ public class PersonAccessService {
                 .filter(p -> city.equals(p.getCity()))
                 .collect(Collectors.toList());
     }
+
+
 }
 

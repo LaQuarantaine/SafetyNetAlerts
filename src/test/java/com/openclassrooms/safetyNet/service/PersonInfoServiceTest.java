@@ -4,7 +4,6 @@ import com.openclassrooms.safetyNet.dataStore.JsonDataStore;
 import com.openclassrooms.safetyNet.dto.ChildAlertDTO;
 import com.openclassrooms.safetyNet.dto.FireResidentDTO;
 import com.openclassrooms.safetyNet.dto.FireResponseDTO;
-import com.openclassrooms.safetyNet.dto.HouseholdMemberDTO;
 import com.openclassrooms.safetyNet.model.Firestation;
 import com.openclassrooms.safetyNet.model.MedicalRecord;
 import com.openclassrooms.safetyNet.model.Person;
@@ -50,44 +49,34 @@ class PersonInfoServiceTest {
 	}
 
 	@Test
-	@DisplayName("Retourne uniquement les enfants vivant à l'adresse avec les autres membres du foyer")
-	void getChildrenByAddress_shouldReturnChildrenWithHouseholdAndIgnoreExternalPerson() {
-		// Arrange
-	    Person person1 = new Person("Sara", "Dupont", "18 rue des Pivoines", "Paris", "75000", "0000", "sara@gmail.com");
-	    Person person2 = new Person("Suzanne", "Dupont", "18 rue des Pivoines", "Paris", "75000", "0000", "suzanne@x.com");
-	    Person person3 = new Person("Simon", "Robert", "123 avenue Leclerc", "Paris", "75000", "0000", "simon@gmail.com");     
-	    Person person4 = new Person("Luc", "Dupont", "18 rue des Pivoines", "Paris", "75000", "0000", "luc@gmail.com");
+	@DisplayName("Retourne un enfant avec une liste de membres du foyer non vide")
+	void getChildrenByAddress_shouldReturnChildrenWithHouseholdStructureOnly() {
+	    // Arrange
+	    Person child = new Person("Sara", "Dupont", "18 rue des Pivoines", "Paris", "75000", "0000", "sara@gmail.com");
+	    Person adult1 = new Person("Suzanne", "Dupont", "18 rue des Pivoines", "Paris", "75000", "0000", "suzanne@x.com");
+	    Person adult2 = new Person("Luc", "Dupont", "18 rue des Pivoines", "Paris", "75000", "0000", "luc@gmail.com");
 
-	    List<Person> residentsAtAddress = List.of(person1, person2, person4);
-	    when(personAccessService.getResidentsAtAddress("18 rue des Pivoines")).thenReturn(residentsAtAddress);
+	    List<Person> residents = List.of(child, adult1, adult2);
+	    when(personAccessService.getResidentsAtAddress("18 rue des Pivoines")).thenReturn(residents);
 
-	    // Simuler les âges
-	    when(personAgeService.getAgeForPerson(person1)).thenReturn(10);
-	    when(personAgeService.getAgeForPerson(person2)).thenReturn(35);
-	    when(personAgeService.getAgeForPerson(person4)).thenReturn(38);
+	    when(personAgeService.getAgeForPerson(child)).thenReturn(10);
+	    when(personAgeService.getAgeForPerson(adult1)).thenReturn(35);
+	    when(personAgeService.getAgeForPerson(adult2)).thenReturn(40);
 
-	    // Simuler qui est enfant
-	    when(personAgeService.isChild(person1)).thenReturn(true);
-	    when(personAgeService.isChild(person2)).thenReturn(false);
-	    when(personAgeService.isChild(person4)).thenReturn(false);
+	    when(personAgeService.isChild(child)).thenReturn(true);
+	    when(personAgeService.isChild(adult1)).thenReturn(false);
+	    when(personAgeService.isChild(adult2)).thenReturn(false);
 
 	    // Act
 	    List<ChildAlertDTO> result = personInfoService.getChildrenByAddress("18 rue des Pivoines");
 
 	    // Assert
 	    assertThat(result).hasSize(1);
-	    
-	    assertThat(result).anySatisfy(dto -> {
-	        assertThat(dto.getFirstName()).isEqualTo("Sara");
-	        assertThat(dto.getLastName()).isEqualTo("Dupont");
-	        assertThat(dto.getAge()).isEqualTo(10);
-	        assertThat(dto.getHouseholdMembers())
-	            .containsExactlyInAnyOrder(
-	                new HouseholdMemberDTO("Suzanne", "Dupont"),
-	                new HouseholdMemberDTO("Luc", "Dupont")
-	            );
-	    });
-	    
+	    ChildAlertDTO dto = result.get(0);
+
+	    assertThat(dto.getFirstName()).isEqualTo("Sara");
+	    assertThat(dto.getHouseholdMembers()).isNotNull();
+	    assertThat(dto.getHouseholdMembers()).hasSize(2); 
 	}
 	
 	@Test

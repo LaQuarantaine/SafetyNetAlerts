@@ -19,6 +19,7 @@ public class JsonDataStore {	// est instancié comme bean avec ses listes vides
     private List<Person> persons = new ArrayList<>();
     private List<MedicalRecord> medicalRecords = new ArrayList<>();
     private List<Firestation> firestations = new ArrayList<>();
+    
 	public List<Person> getPersons() {
 		return persons;
 	}

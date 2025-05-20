@@ -2,8 +2,10 @@ package com.openclassrooms.safetyNet.service;
 
 import com.openclassrooms.safetyNet.model.Person;
 
+
 import com.openclassrooms.safetyNet.dataStore.JsonDataStore;
-import com.openclassrooms.safetyNet.dto.PersonDTO;
+import com.openclassrooms.safetyNet.dto.PersonCreateDTO;
+import com.openclassrooms.safetyNet.dto.PersonUpdateDTO;
 
 import org.springframework.stereotype.Service;
 
@@ -23,7 +25,8 @@ public class PersonService {
 		this.jsonFileService = jsonFileService;
 	}
 
-	public PersonDTO addPerson(PersonDTO personDTO) {
+ 
+	public PersonCreateDTO addPerson(PersonCreateDTO personDTO) {
         Person person = addPersonDTO(personDTO);
         dataStore.getPersons().add(person);
         jsonFileService.saveDataToFile();
@@ -31,24 +34,31 @@ public class PersonService {
         return personDTO;
     }
 
-    public Optional<PersonDTO> updatePerson(String firstName, String lastName, PersonDTO personDTO) {
-    	Optional<Person> personOpt = dataStore.getPersons().stream()
-                .filter(p -> p.getFirstName().equals(firstName) && p.getLastName().equals(lastName))
-                .findFirst();
-    	
-    	return personOpt.map(existingPerson -> {
-    	    existingPerson.setAddress(personDTO.getAddress());
-    	    existingPerson.setCity(personDTO.getCity());
-    	    existingPerson.setZip(personDTO.getZip());
-    	    existingPerson.setPhone(personDTO.getPhone());
-    	    existingPerson.setEmail(personDTO.getEmail());
+	public Optional<PersonUpdateDTO> updatePerson(String firstName, String lastName, PersonUpdateDTO personDTO) {
+	    Optional<Person> personOpt = dataStore.getPersons().stream()
+	            .filter(p -> p.getFirstName().equals(firstName) && p.getLastName().equals(lastName))
+	            .findFirst();
 
-    	    jsonFileService.saveDataToFile();
-            
-            return personDTO;
+	    return personOpt.map(existingPerson -> {
+	        existingPerson.setAddress(personDTO.getAddress());
+	        existingPerson.setCity(personDTO.getCity());
+	        existingPerson.setZip(personDTO.getZip());
+	        existingPerson.setPhone(personDTO.getPhone());
+	        existingPerson.setEmail(personDTO.getEmail());
 
-    	  });
-    }
+	        jsonFileService.saveDataToFile();
+
+	        // Retourne un nouveau DTO basé sur la personne mise à jour
+	        return new PersonUpdateDTO(
+	            existingPerson.getAddress(),
+	            existingPerson.getCity(),
+	            existingPerson.getZip(),
+	            existingPerson.getPhone(),
+	            existingPerson.getEmail()
+	        );
+	    });
+	}
+
 
     public boolean deletePerson(String firstName, String lastName) {
     	List<Person> persons = dataStore.getPersons();
@@ -60,7 +70,7 @@ public class PersonService {
         return removed;
     }
 
-    private Person addPersonDTO(PersonDTO dto) {
+    private Person addPersonDTO(PersonCreateDTO dto) {
         Person person = new Person();
         person.setFirstName(dto.getFirstName());
         person.setLastName(dto.getLastName());

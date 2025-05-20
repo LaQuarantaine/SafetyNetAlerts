@@ -183,14 +183,6 @@
     "zip" : "97451",
     "phone" : "841-874-7458",
     "email" : "gramps@email.com"
-  }, {
-    "firstName" : "virginie",
-    "lastName" : "delort",
-    "address" : "17 avenue de Thouars",
-    "city" : "bordeaux",
-    "zip" : "33000",
-    "phone" : "0102030405",
-    "email" : "v.delort@gmail.com"
   } ],
   "firestations" : [ {
     "address" : "1509 Culver St",
@@ -244,6 +236,12 @@
     "birthdate" : "03/06/1989",
     "medications" : [ "pharmacol:5000mg", "terazine:10mg", "noznazol:250mg" ],
     "allergies" : [ ]
+  }, {
+    "firstName" : "Tenley",
+    "lastName" : "Boyd",
+    "birthdate" : "02/18/2012",
+    "medications" : [ ],
+    "allergies" : [ "peanut" ]
   }, {
     "firstName" : "Roger",
     "lastName" : "Boyd",
@@ -364,11 +362,5 @@
     "birthdate" : "08/06/1945",
     "medications" : [ "tradoxidine:400mg" ],
     "allergies" : [ ]
-  }, {
-    "firstName" : "virginie",
-    "lastName" : "delort",
-    "birthdate" : "30/06/1984",
-    "medications" : [ "aznol:350mg", "hydrapermazol:100mg" ],
-    "allergies" : [ "allergiques aux cons !" ]
   } ]
 }

@@ -1,7 +1,7 @@
 package com.openclassrooms.safetyNet.dto;
 
 
-public class PersonDTO {
+public class PersonCreateDTO {
     private String firstName;
     private String lastName;
     private String address;
@@ -10,11 +10,11 @@ public class PersonDTO {
     private String phone;
     private String email;
     
-    public PersonDTO() {
+    public PersonCreateDTO() {
     	
     }
     
-	public PersonDTO(String firstName, String lastName, String address, String city, String zip, String phone,
+	public PersonCreateDTO(String firstName, String lastName, String address, String city, String zip, String phone,
 			String email) {
 		super();
 		this.firstName = firstName;

@@ -3,6 +3,8 @@ package com.openclassrooms.safetyNet.controller;
 import java.util.List;
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,19 +20,24 @@ import com.openclassrooms.safetyNet.dto.FirestationDTO;
 import com.openclassrooms.safetyNet.dto.FirestationResponseDTO;
 import com.openclassrooms.safetyNet.service.FirestationLogicService;
 
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-
 // le contrôleur REST
-@Slf4j
+
 @RestController
 @RequestMapping
-@RequiredArgsConstructor
 public class FirestationController {
+	
+	
+	private static final Logger log = LoggerFactory.getLogger(FirestationController.class);
 	
 	private final FirestationLogicService firestationLogicService;
 
 	
+	public FirestationController(FirestationLogicService firestationLogicService) {
+		super();
+		this.firestationLogicService = firestationLogicService;
+	}
+
+
 	@GetMapping("/firestation") // endpoint 1
 	public ResponseEntity<FirestationResponseDTO> getByStation(@RequestParam String stationNumber) {
 		log.info("Entrée requête GET /firestation?stationNumber={}", stationNumber);

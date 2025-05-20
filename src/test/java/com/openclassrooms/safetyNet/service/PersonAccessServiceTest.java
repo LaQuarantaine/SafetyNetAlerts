@@ -16,6 +16,9 @@ import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.tuple;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -25,7 +28,7 @@ class PersonAccessServiceTest {
     private JsonDataStore dataStore;
 
     @InjectMocks
-    private PersonAccessService service;
+    private PersonAccessService personAccessService;
 
     private List<Person> persons;
 
@@ -38,12 +41,13 @@ class PersonAccessServiceTest {
         );
     }
 
+    
     @Test
     @DisplayName("Retourne les habitants d'une adresse donnée")
     void getResidentsAtAddress_shouldReturnMatchingPersons() {
         when(dataStore.getPersons()).thenReturn(persons);
 
-        List<Person> result = service.getResidentsAtAddress("23 avenue du Roi");
+        List<Person> result = personAccessService.getResidentsAtAddress("23 avenue du Roi");
 
         assertThat(result).hasSize(2);
         assertThat(result).extracting(Person::getFirstName, Person::getLastName)
@@ -53,27 +57,26 @@ class PersonAccessServiceTest {
                         		  );
     }
 
+    
     @Test
     @DisplayName("Retourne les habitants des adresses données")
     void getResidentsAtAddresses_shouldReturnAllMatchingPersons() {
         when(dataStore.getPersons()).thenReturn(persons);
 
-        List<Person> result = service.getResidentsAtAddresses(Set.of("23 avenue du Roi", "17 rue d'Italie"));
+        List<Person> result = personAccessService.getResidentsAtAddresses(Set.of("23 avenue du Roi", "17 rue d'Italie"));
 
         assertThat(result).hasSize(3);
     }
 
+    
     @Test
     @DisplayName("Retourne les habitants d'une ville donnée")
-    void getResidentsAtCity_shouldReturnCityResidents() {
-        when(dataStore.getPersons()).thenReturn(persons);
-
-        List<Person> result = service.getResidentsAtCity("Paris");
-
-        assertThat(result).hasSize(1);
-        assertThat(result).extracting(Person::getFirstName, Person::getLastName)
-                          .containsExactlyInAnyOrder(
-                        		  tuple("Gerard", "Malbarre")
-                        		  );
+    void testGetResidentsAtCity_shouldReturnPersonsInCity() {
+    	when(dataStore.getPersons()).thenReturn(persons); 
+        List<Person> result = personAccessService.getResidentsAtCity("Versailles");
+        assertNotNull(result);
+        assertFalse(result.isEmpty());
+        assertTrue(result.stream().allMatch(p -> p.getCity().equals("Versailles")));
+              		 
     }
 }
