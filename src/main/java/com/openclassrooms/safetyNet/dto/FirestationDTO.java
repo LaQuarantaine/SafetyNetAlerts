@@ -1,22 +1,16 @@
-package com.openclassrooms.safetyNet.model;
+package com.openclassrooms.safetyNet.dto;
 
 
-public class Firestation {
-	
+public class FirestationDTO {
 	private String address;
-	
-	private String station;
-
-	public Firestation() {
-		
-	}
-	
-	public Firestation(String address, String station) {
+    private String station;
+    
+	public FirestationDTO(String address, String station) {
 		super();
-		this.address = address;
-		this.station = station;
+		this.setAddress(address);
+		this.setStation(station);
 	}
-	
+
 	public String getAddress() {
 		return address;
 	}
@@ -32,6 +26,6 @@ public class Firestation {
 	public void setStation(String station) {
 		this.station = station;
 	}
-
-	
+    
+    
 }

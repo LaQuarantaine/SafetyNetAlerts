@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <!-- Console Appender : affiche dans le terminal -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n" />
+        </Console>
+
+        <!-- Fichier de logs (optionnel mais conseillé) -->
+        <File name="AppFile" fileName="logs/app.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n" />
+        </File>
+    </Appenders>
+
+    <Loggers>
+        <!-- Logger principal pour ton application -->
+        <Logger name="com.openclassrooms.safetyNet" level="debug" additivity="false">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="AppFile" />
+        </Logger>
+
+        <!-- Hibernate SQL : passe à WARN pour éviter les logs SQL trop verbeux -->
+        <Logger name="org.hibernate.SQL" level="warn" additivity="false">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="AppFile" />
+        </Logger>
+
+        <!-- Hibernate internals (optionnel) -->
+        <Logger name="org.hibernate.type.descriptor.sql" level="warn" />
+
+        <!-- Logger racine -->
+        <Root level="info">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="AppFile" />
+        </Root>
+    </Loggers>
+</Configuration>
